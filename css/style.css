@@ -100,3 +100,9 @@
 	text-align: left;
 }
 .footerright{
+	width:200px;
+	float:right;
+	height:20px;
+	position:relative;
+	text-align: right;
+}

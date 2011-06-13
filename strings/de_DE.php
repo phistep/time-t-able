@@ -1,4 +1,7 @@
 <?php
+// HEADER
+define('STR_TITLE_HOME', 'STARTSEITE');
+
 // FOOTER
 define('STR_ABOUT', 'Impressum');
 define('STR_CONTACT', 'Kontakt');
