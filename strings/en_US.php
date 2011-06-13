@@ -1,6 +1,7 @@
 <?php
 // HEADER
 define('STR_TITLE_HOME', 'HOME');
+define('STR_TITLE_LOGIN', 'SIGN IN');
 
 // FOOTER
 define('STR_ABOUT', 'About');

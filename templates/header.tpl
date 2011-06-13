@@ -12,7 +12,7 @@
 	<meta name="date" content="<?php echo C_DATE; ?>" />
 	
 	<!-- CSS -->
-	<link rel="stylesheet" media="screen" type="text/css" href="css/style.css" title="Standart" />
+	<link rel="stylesheet" media="screen" type="text/css" href="<?php echo MAIN_URL; ?>css/style.css" title="Standart" />
 
 	<!-- Title -->
 	<title><?php echo "$title"; ?> &middot; <?php echo LOGO_NAME; ?></title>
