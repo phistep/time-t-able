@@ -1,0 +1,102 @@
+/* HEADER */
+#header{
+	height:20px;
+}
+.headerleft{
+	width:100px;
+	float:left;
+	height:20px;
+	position:relative;
+	text-align: left;
+}
+.headermiddle{
+	height:20px;
+	text-align: center;
+	position:relative;
+}
+.headerright{
+	width:100px;
+	float:right;
+	height:20px;
+	position:relative;
+	text-align: right;
+}
+
+
+/* CONTENT */
+.centered{
+	margin:auto;
+	margin-top:50px;
+	margin-bottom:200px;
+}
+.login-form{
+	width:300px;
+}
+.register-form{
+	width:400px;
+}
+.main{
+	width:800px;
+}
+.desc{
+	width:350px;
+}
+.registerbutton{
+	background: 
+			-webkit-gradient(
+			    linear,
+			    left bottom,
+			    left top,
+			    color-stop(0, rgb(232,232,232)),
+			    color-stop(1, rgb(255,255,255))
+			);
+		background:
+			-moz-linear-gradient(
+			    center bottom,
+			    rgb(232,232,232) 0%,
+			    rgb(255,255,255) 100%
+			);
+
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+
+		-webkit-box-shadow: 00px 0px 5px  #adadad;
+		-moz-box-shadow: 00px 0px 5px #adadad;
+		box-shadow: 00px 0px 5px #adadad;
+
+		border: none;
+		padding: 5px;
+		margin: 5px;
+		font-family: Arial, sans-serif;
+		font-size: 26px;
+		font-style: normal;
+		width:250px;
+		text-align: center;
+}
+.registerbutton:hover{
+	-webkit-box-shadow: 00px 0px 5px  #000;
+	-moz-box-shadow: 00px 0px 5px #000;
+	box-shadow: 00px 0px 5px #000;
+}
+
+#timetable{
+	padding-bottom:25px;
+}
+.optionpane{
+	text-align: left;
+}
+
+
+/* FOOTER */
+#footer{
+	height:20px;
+}
+.footerleft{
+	width:100px;
+	float:left;
+	height:20px;
+	position:relative;
+	text-align: left;
+}
+.footerright{
