@@ -13,7 +13,13 @@
 	
 	<!-- CSS -->
 	<link rel="stylesheet" media="screen" type="text/css" href="<?php echo MAIN_URL; ?>css/style.css" title="Standart" />
-
+	<?php
+	if($_SESSION['login'] == '1'){
+		// logged in
+		echo "\n\t<!-- JS -->\n\t<script type=\"text/javascript\" src=\"js/jscolor/jscolor.js\"></script>\n";
+	}
+	?>
+	
 	<!-- Title -->
 	<title><?php echo "$title"; ?> &middot; <?php echo LOGO_NAME; ?></title>
 </head>

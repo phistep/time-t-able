@@ -31,7 +31,6 @@ else{
 			while($row = $usernamecheck->fetch_assoc()){
 				if ($row['username'] == $_POST['username']){
 					$ID = $row['ID'];
-					echo $ID;
 				}
 			}
 		}
@@ -51,6 +50,7 @@ else{
 					if ($row['pw_hash'] == sha1($_POST['password'])){
 						$_SESSION['login'] = '1';
 						$_SESSION['ID'] = $ID;
+						$_SESSION['username'] = $_POST['username'];
 					}
 					else{
 						// user fail handling

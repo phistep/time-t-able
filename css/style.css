@@ -1,3 +1,11 @@
+/* GENERAL */
+body{
+	text-align: center; font-family: Arial;
+}
+h1{
+	font-size: 18px;
+}
+
 /* HEADER */
 #header{
 	height:20px;
@@ -82,6 +90,21 @@
 
 #timetable{
 	padding-bottom:25px;
+}
+#timetable .table{
+	margin-bottom: 100px;
+}
+#timetable td{
+	width: 125px;
+}
+#timetable tr:nth-child(odd){
+	background-color:#e8e8e8;
+}
+#timetable tr:nth-child(even){
+	background-color:#fff;
+}
+#timetable ul{
+	text-align: left; margin-bottom: 50px;
 }
 .optionpane{
 	text-align: left;
