@@ -5,34 +5,30 @@
 
 ## Cloning and self-hosting
 Before I'm done with the main code and will be able to write an install file you have to manually setup your passwords and databases. Getting the source with git installed ist very easy:
-
-`$ git clone https://github.com/Ps0ke/time-t-able.git`
-`$ cd time-t-able`
+	`$ git clone https://github.com/Ps0ke/time-t-able.git`
+	`$ cd time-t-able`
 
 then you have to setup your SQL password file:
-
-`$ cd strings`
-`$ touch pw.php`
+	`$ cd strings`
+	`$ touch pw.php`
 
 Open the file with the editor of your choice and add the following code (with your passwords of course):
-
-`<?php
-define('SQL_USER', 'root');
-define('SQL_PASSWORD', '');
-define('SQL_DATABASE', 'time-t-able');
-define('SQL_HOST', 'localhost');
-?>`
+	`<?php
+	define('SQL_USER', 'root');
+	define('SQL_PASSWORD', '');
+	define('SQL_DATABASE', 'time-t-able');
+	define('SQL_HOST', 'localhost');
+	?>`
 
 Then you have to set up your Database. You need at least this one table:
-
-`CREATE TABLE IF NOT EXISTS 'time-t-able_core_users' (
-  'ID' int(11) NOT NULL AUTO_INCREMENT,
-  'email' varchar(100) NOT NULL,
-  'username' varchar(30) NOT NULL,
-  'pw_hash' varchar(40) NOT NULL,
-  'public' int(1) NOT NULL,
-  PRIMARY KEY ('ID')
-)`
+	`CREATE TABLE IF NOT EXISTS 'time-t-able_core_users' (
+		'ID' int(11) NOT NULL AUTO_INCREMENT,
+		'email' varchar(100) NOT NULL,
+		'username' varchar(30) NOT NULL,
+		'pw_hash' varchar(40) NOT NULL,
+		'public' int(1) NOT NULL,
+		PRIMARY KEY ('ID')
+	)`
 
 ## License
 My code is published under cc-by-nc-sa (c) 2011 by Philipp Stephan, [ps0ke.de](http://ps0ke.de)
