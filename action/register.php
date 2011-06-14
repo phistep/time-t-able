@@ -51,6 +51,16 @@ else{
 		}
 		echo "done";
 		
+		// Creating user db entry
+		$query = '	INSERT INTO
+						`time-t-able_users`
+						(email, username, pw_hash)
+					VALUES
+						("'.$_POST['email'].'", "'.$_POST['username'].'", "'.sha1($_POST['password']).'")';
+		$userinsert = $db->query($query);
+		if(!$userinsert){
+			die('Query Error:'.$db->error);
+		}	
 		
 		// manual 'log in'
 		$_SESSION['login'] = '1';
