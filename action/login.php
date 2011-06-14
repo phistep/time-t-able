@@ -47,7 +47,6 @@ else{
 				die('Query Error:'.$db->error);
 			}
 			if($passwordcheck->num_rows){
-				echo 'foo';
 				while($row = $passwordcheck->fetch_assoc()){
 					if ($row['pw_hash'] == sha1($_POST['password'])){
 						$_SESSION['login'] = '1';
