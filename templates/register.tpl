@@ -1,5 +1,5 @@
 <div class="centered register-form">
-	<form>
+	<form method="post">
 		<fieldset>
 		<legend><?php echo STR_REGISTER_LEGEND; ?></legend>
 		<table border="0">

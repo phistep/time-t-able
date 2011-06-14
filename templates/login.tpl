@@ -1,5 +1,5 @@
 <div class="centered login-form">
-	<form>
+	<form method="post">
 	  <fieldset>
 		<legend><?php echo STR_LOGIN_LEGEND; ?></legend>
 		<table border="0">

@@ -1,6 +1,6 @@
 <?php
 // Global includes
-include('general/include.php');
+include('include.php');
 include('strings/en_US.php'); // English localization for now
 
 // Check for login status
@@ -18,7 +18,7 @@ else {
 include('templates/header.tpl');
 
 // Main Content
-include('templates/'.$content_tpl);
+include('templates/'.$content_tpl); // won't work if logged in for now, will cause errors
 
 // Footer
 include('templates/footer.tpl');
