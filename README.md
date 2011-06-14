@@ -1,4 +1,5 @@
 # time(t)able
+Webapp for managing timetables. Made using PHP, MySQL, HTML and JS.
 
 ## About time(t)able
 `time(t)able` (pronounced timeable) is a web-based application to manage timetables. I used to have my personal timetable on my homepage written in obfuscated table-layouted html. Originally only meant for personal use, classmates started to use it as well and soon I had a hand full of people relaying on my online timetable. This works good for a few people in the same class using the same timetable, but soon we won't be in one class anymore, instead having personal courses with individual timetables. So I started this project to provide a solution for me and my friends to still have the timetable online and always available.
@@ -17,10 +18,10 @@ then you have to setup your SQL password file:
 Open the file with the editor of your choice and add the following code (with your passwords of course):
 
 	<?php
-	define('SQL_USER', 'root');
-	define('SQL_PASSWORD', '');
-	define('SQL_DATABASE', 'time-t-able');
-	define('SQL_HOST', 'localhost');
+	define('SQL_USER', <SQL Username>);
+	define('SQL_PASSWORD', <SQL Password>);
+	define('SQL_DATABASE', <SQL Database>);
+	define('SQL_HOST', <SQL Host>);
 	?>
 
 Then you have to set up your Database. You need at least this one table:
