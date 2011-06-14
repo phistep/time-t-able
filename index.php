@@ -1,7 +1,14 @@
 <?php
 // Global includes
 include('include.php');
-include('strings/en_US.php'); // English localization for now
+
+// Check for language
+if(preg_match("/^de.*/", $_SERVER['HTTP_ACCEPT_LANGUAGE']))
+	$lang = 'de_DE';
+else // fallback
+	$lang = 'en_US';
+// Load localization
+include('strings/'.$lang.'.php');
 
 // Check for login status
 if($_SESSION['login'] == '1'){
