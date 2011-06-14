@@ -4,6 +4,7 @@ include('../include.php');
 
 if($_SESSION['login'] == '1'){
 	// Already logged in, no use for this script
+	echo "logged in";
 }
 else{
 	// Choose processing option: Viewing or database action

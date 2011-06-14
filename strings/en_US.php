@@ -2,6 +2,7 @@
 // HEADER
 define('STR_TITLE_HOME', 'HOME');
 define('STR_TITLE_LOGIN', 'SIGN IN');
+define('STR_TITLE_REGISTER', 'REGISTER');
 
 // FOOTER
 define('STR_ABOUT', 'About');
@@ -17,7 +18,7 @@ define('STR_LOGIN_GO_BUTTON', 'Sign In!');
 define('STR_REGISTER_LEGEND', 'Register');
 define('STR_REGISTER_USERNAME', 'Username:');
 define('STR_REGISTER_PASSWORD', 'Password:');
-define('STR_REGSITER_REP_PASSWORD', 'Repeat Password:');
+define('STR_REGISTER_REP_PASSWORD', 'Repeat Password:');
 define('STR_REGISTER_EMAIL', 'E-Mail:');
 define('STR_REGISTER_CAPTCHA', 'Captcha:');
 define('STR_REGISTER_GO_BUTTON', 'Make me productive!');

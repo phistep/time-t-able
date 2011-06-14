@@ -2,6 +2,7 @@
 // HEADER
 define('STR_TITLE_HOME', 'STARTSEITE');
 define('STR_TITLE_LOGIN', 'EINLOGGEN');
+define('STR_TITLE_REGISTER', 'REGISTRIEREN');
 
 // FOOTER
 define('STR_ABOUT', 'Impressum');
