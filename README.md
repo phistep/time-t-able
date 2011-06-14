@@ -26,7 +26,7 @@ Open the file with the editor of your choice and add the following code (with yo
 
 Then you have to set up your Database. You need at least this one table:
 
-	CREATE TABLE IF NOT EXISTS `time-t-able_core_users` (
+	CREATE TABLE IF NOT EXISTS `time-t-able_users` (
 	  `ID` int(11) NOT NULL AUTO_INCREMENT,
 	  `email` varchar(100) NOT NULL,
 	  `username` varchar(30) NOT NULL,

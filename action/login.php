@@ -19,7 +19,7 @@ else{
 						username,
 						ID
 					FROM
-						`time-t-able_core_users`
+						`time-t-able_users`
 					WHERE
 						1";
 		$usernamecheck = $db->query($query);
@@ -37,7 +37,7 @@ else{
 			$query = "	SELECT
 							pw_hash
 						FROM
-							`time-t-able_core_users`
+							`time-t-able_users`
 						WHERE
 							ID = ".$ID;
 			$passwordcheck = $db->query($query);
