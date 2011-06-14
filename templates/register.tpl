@@ -26,8 +26,7 @@
 			<tr>
 				<td>
 					<label for="captcha"><?php echo STR_REGISTER_CAPTCHA; ?></label><br />
-					<img src="http://blog.psoke.de/general/captcha.php">
-						<?php /* has to be replaced by real captcha image*/ ?>
+					<img src="<?php echo MAIN_URL; ?>img/captcha.php" alt="captcha">
 				</td>
 				<td>
 					<br />
