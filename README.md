@@ -24,7 +24,7 @@ Open the file with the editor of your choice and add the following code (with yo
 	define('SQL_HOST', <SQL Host>);
 	?>
 
-Then you have to set up your Database. You need at least this one table:
+Then you have to set up your Database. Perform following SQL commands:
 
 	CREATE TABLE IF NOT EXISTS `time-t-able_users` (
 	  `ID` int(11) NOT NULL AUTO_INCREMENT,
@@ -33,9 +33,28 @@ Then you have to set up your Database. You need at least this one table:
 	  `pw_hash` varchar(40) NOT NULL,
 	  `public` int(1) NOT NULL,
 	  PRIMARY KEY (`ID`)
-	)
+	);
+	CREATE TABLE IF NOT EXISTS `time-t-able_times` (
+	  `user_ID` int(11) NOT NULL,
+	  `ID` int(11) NOT NULL,
+	  `timespan` varchar(20) DEFAULT NULL
+	);
+	CREATE TABLE IF NOT EXISTS `time-t-able_subjects` (
+	  `user_ID` int(11) NOT NULL,
+	  `ID` int(11) NOT NULL,
+	  `name` varchar(30) DEFAULT NULL,
+	  `teacher` varchar(30) DEFAULT NULL,
+	  `std_room` varchar(20) DEFAULT NULL,
+	  `color` varchar(6) DEFAULT 'FFFFFF'
+	);
+	CREATE TABLE IF NOT EXISTS `time-t-able_table` (
+	  `user_ID` int(11) NOT NULL,
+	  `fieldnumber` int(11) NOT NULL,
+	  `subject_ID` int(11) DEFAULT NULL,
+	  `room` varchar(20) DEFAULT NULL
+	);
 
 ## License
-My code is published under cc-by-nc-sa (c) 2011 by Philipp Stephan, [ps0ke.de](http://ps0ke.de)
+My code is published under [cc-by-nc-sa](http://creativecommons.org/licenses/by-nc-sa/3.0/) (c) 2011 by Philipp Stephan, [ps0ke.de](http://ps0ke.de)
 
-The jscolorpicker is published under GPL by Jan Odvarko, [odvarko.cz](http://odvarko.cz)
+The [jscolorpicker](http://jscolor.com) is published under GPL by Jan Odvarko, [odvarko.cz](http://odvarko.cz)
