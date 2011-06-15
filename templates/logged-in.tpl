@@ -145,24 +145,48 @@
 	</table>
 
 	<div class="optionpane">
+		<?php
+		$query = "	SELECT
+						class,
+						period,
+						public
+					FROM
+						`time-t-able_users`
+					WHERE
+						ID = \"".$_SESSION['ID']."\"";
+		$generalcheck = $db->query($query);
+		if(!$generalcheck){
+			die('Query Error:'.$db->error);
+		}
+		if($generalcheck->num_rows){
+			$row = $generalcheck->fetch_assoc();
+				$class = $row['class'];
+				$period = $row['period'];
+				if($row['public']){
+					$public = 'checked="checked"';
+				}
+		}
+		
+		?>
+		
 		<a href="#"><h1><?php echo STR_GENERAL_PREFERENCES; ?></h1></a>
 		<hr />
 			<table>
 				<tr>
 					<td><?php echo STR_GENERAL_PERIOD; ?></td>
-					<td><input type="text" value="" /></td>
+					<td><input type="text" value="<?php echo $period; ?>" /></td>
 				</tr>
 				<tr>
 					<td><?php echo STR_GENERAL_CLASS; ?></td>
-					<td><input type="text" value="" /></td>
+					<td><input type="text" value="<?php echo $class; ?>" /></td>
 				</tr>
 				<tr>
 					<td><?php echo STR_GENERAL_PUBLIC; ?></td>
-					<td><input type="checkbox" checked="checked" /></td>
+					<td><input type="checkbox" <?php echo $public; ?> /></td>
 				</tr>
 				<tr>
 					<td><?php echo STR_GENERAL_LINK; ?></td>
-					<td><input type="text" value="<?php echo MAIN_URL; ?>?view=<?php echo $_SESSION['username']; ?>" /></td>
+					<td><input type="text" readonly="readonly" value="<?php echo MAIN_URL; ?>?view=<?php echo $_SESSION['username']; ?>" /></td>
 				</tr>
 				<tr>
 					<td>Delete Account (No undo!):<br />Confirm password:<br /><form method="post" action="action/delete.php"><input class="button" value="Good Bye!" name="formaction" type="submit"></td>
