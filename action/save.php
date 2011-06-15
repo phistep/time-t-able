@@ -37,7 +37,25 @@ else{
 			break;
 			
 			case 'times':
-				// times
+				// times				
+				$query = '';
+				for ($i=1; $i < 13; $i++) { 
+					$query = $query."	UPDATE
+											`time-t-able_times` 
+										SET 
+											timespan = \"".$_POST['time_'.$i]."\"
+										WHERE
+											user_ID = \"".$_SESSION['ID']."\"
+											AND ID = \"".$i."\";";
+				}
+
+				$timecheck = $db->multi_query($query);
+				if(!$timecheck){
+					die('Query Error:'.$db->error);
+				}
+				if(!$timecheck->num_rows){
+					// error
+				}
 			break;
 			
 			case 'subjects':
