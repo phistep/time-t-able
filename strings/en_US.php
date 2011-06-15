@@ -26,6 +26,7 @@ define('STR_REGISTER_DATA_LEGEND', 'Your Data:');
 define('STR_REGISTER_DATA_INFO', 'I take privacy very seriously. I will not use your email, but support ect. and I will never share it. I hate Spam, too. Your password will never be stored in clear text.');
 
 // MAIN
+define('STR_SAVE_BUTTON', 'Save');
 define('STR_DAY_MON', 'Monday');
 define('STR_DAY_TUE', 'Tuesday');
 define('STR_DAY_WED', 'Wednesday');
@@ -36,6 +37,10 @@ define('STR_GENERAL_PERIOD', 'Period/Semester:');
 define('STR_GENERAL_CLASS', 'Class:');
 define('STR_GENERAL_PUBLIC', 'Public timetable:');
 define('STR_GENERAL_LINK', 'Your public link:');
+define('STR_GENERAL_DEL_SHOW', 'Delete account');
+define('STR_GENERAL_DEL_CONFIRM', 'Confirm password:');
+define('STR_GENERAL_DEL_NOUNDO', 'You can\'t undo this action!');
+define('STR_GENERAL_DEL_GO', 'Good Bye!');
 define('STR_TIMES', 'Times');
 define('STR_SUBJECTS_SUBJECTS', 'Subjects');
 define('STR_SUBJECTS_NAME', 'Name:');
