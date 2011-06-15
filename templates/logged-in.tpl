@@ -281,8 +281,6 @@
 				?>
 			</table>
 			
-			<?php echo $subjectlist; ?>
-			
 		<hr />
 	</div>
 </div>
