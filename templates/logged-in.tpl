@@ -164,6 +164,10 @@
 					<td><?php echo STR_GENERAL_LINK; ?></td>
 					<td><input type="text" value="<?php echo MAIN_URL; ?>?view=<?php echo $_SESSION['username']; ?>" /></td>
 				</tr>
+				<tr>
+					<td>Delete Account (No undo!):<br />Confirm password:<br /><form method="post" action="action/delete.php"><input class="button" value="Good Bye!" name="formaction" type="submit"></td>
+					<td><input type="password" value="" name="password" /></form></td>
+				</tr>
 			</table>
 		<hr />
 	</div>
