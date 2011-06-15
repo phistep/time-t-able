@@ -6,5 +6,6 @@ define('C_DATE', '2011'); // Date copyrighted/last updated to indecate if its ol
 define('ABOUT_URL', '#'); // Linking to the about page, probably containing legal info or some stuff like this
 define('CONTACT_URL', '#'); // Link for contacting the webmaster, probably a mailto:// address
 define('MAIN_URL', 'http://localhost/~Philipp/time-t-able/'); // Url of the root directory of the site
+define('POWERED_BY', 'Powered by <a href="#">time(t)able</a>')
 
 ?>

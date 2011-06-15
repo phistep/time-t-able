@@ -35,7 +35,7 @@ h1{
 .centered{
 	margin:auto;
 	margin-top:50px;
-	margin-bottom:200px;
+	margin-bottom:100px;
 }
 .login-form{
 	width:300px;
@@ -116,7 +116,7 @@ h1{
 	height:20px;
 }
 .footerleft{
-	width:100px;
+	width:300px;
 	float:left;
 	height:20px;
 	position:relative;
