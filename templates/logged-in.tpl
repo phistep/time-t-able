@@ -240,17 +240,38 @@
 					<td><h1><?php echo STR_DAY_FRI; ?></h1></td>
 				</tr>
 				<?php
+				// get all subjects
+				$query = "	SELECT
+								name,
+								ID
+							FROM
+								`time-t-able_subjects`
+							WHERE
+								user_ID = \"".$_SESSION['ID']."\"";
+				$subjectcheck = $db->query($query);
+				if(!$subjectcheck){
+					die('Query Error:'.$db->error);
+				}
+				if($subjectcheck->num_rows){
+					while($row = $subjectcheck->fetch_assoc()){
+						if ($row['name'] != ''){
+							$subjectlist = $subjectlist."\t\t\t\t\t\t\t\t\t".'<option value="'.$row['ID'].'">'.$row['name'].'</option>'."\n";
+						}
+					}
+				}
+				
+				// Displaying the table
 				for($i = 0; $i < 10; $i++){
 					echo"<tr><td>".($i+1).". ".STR_TABLE_LESSON;
 					for ($j=0; $j < 5; $j++) { 
 						echo "
 						<td>
 							<div class=\"\">
-								<select name=\"subject_".(5*$i+$j)."\">
-									<option>".STR_TABLE_CHOOSE."</option>
+								<select name=\"subject_".((5*$i+$j)+1)."\">
+									<option>".STR_TABLE_CHOOSE."</option>\n".$subjectlist."
 								</select>
 								<br>
-								<input name=\"room_".(5*$i+$j)."\" type=\"text\" size=\"5\" value=\"\">
+								<input name=\"room_".((5*$i+$j)+1)."\" type=\"text\" size=\"5\" value=\"\">
 							</div>
 						</td>";
 
@@ -259,6 +280,8 @@
 				}
 				?>
 			</table>
+			
+			<?php echo $subjectlist; ?>
 			
 		<hr />
 	</div>
