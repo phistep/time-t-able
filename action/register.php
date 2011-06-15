@@ -13,23 +13,23 @@ else{
 		// Check for invalid forms
 		if(!isset($_POST['username'], $_POST['password'], $_POST['rep-password'], $_POST['email'], $_POST['captcha'])){
 			// handle invalid form
-			echo "invalid form";
+			die("invalid form");
 		}
 		if ($_SESSION['captcha'] != sha1($_POST['captcha'])) {
 			// handle invalid captcha
-			echo "invalid captcha";
+			die("invalid captcha");
 		}
 		if($_POST['rep-password'] != $_POST['password']){
 			// handle inconsistent passwords
-			echo "inconsistent passwords";
+			die("inconsistent passwords");
 		}
 		if(!preg_match("/^[A-Za-z0-9]{3,30}$/", $_POST['username'])){
 			// handle invalid username
-			echo "invalid username";
+			die("invalid username");
 		}
 		if(!preg_match("/^.+@.+\..+$/", $_POST['email'])){
 			// handle fake email
-			echo "fake email";
+			die("fake email");
 		}
 		$query = "	SELECT
 						username
