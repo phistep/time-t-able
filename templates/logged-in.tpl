@@ -251,20 +251,38 @@
 		<hr />
 			<table>
 				<?php
-				for ($i=0; $i < 20; $i++) { 
-					echo "\t\t\t\t<tr>\n";
-					echo "\t\t\t\t\t<td>".STR_SUBJECTS_NAME."</td>\n";
-					echo "\t\t\t\t\t<td><input type=\"test\" value=\"\" /></td>\n";
-					echo "\t\t\t\t\t<td>".STR_SUBJECTS_ROOM."</td>\n";
-					echo "\t\t\t\t\t<td><input type=\"test\" value=\"\" /></td>\n";
-					echo "\t\t\t\t</tr>\n";
-					echo "\t\t\t\t<tr>\n";
-					echo "\t\t\t\t\t<td>".STR_SUBJECTS_TEACHER."</td>\n";
-					echo "\t\t\t\t\t<td><input type=\"test\" value=\"\" /></td>\n";
-					echo "\t\t\t\t\t<td>".STR_SUBJECTS_COLOR."</td>\n";
-					echo "\t\t\t\t\t<td><input class=\"color\" value=\"FFFFFF\" /></td>\n";
-					echo "\t\t\t\t</tr>\n";
-					echo "\t\t\t\t<tr><td>&nbsp;</td></tr>\n";
+				$query = "	SELECT
+								ID,
+								name,
+								teacher,
+								std_room,
+								color
+							FROM
+								`time-t-able_subjects`
+							WHERE
+								user_ID = \"".$_SESSION['ID']."\"
+							ORDER BY
+								ID";
+				$subjectcheck = $db->query($query);
+				if(!$subjectcheck){
+					die('Query Error:'.$db->error);
+				}
+				if($subjectcheck->num_rows){
+					while($row = $subjectcheck->fetch_assoc()){
+						echo "\t\t\t\t<tr>\n";
+						echo "\t\t\t\t\t<td>".STR_SUBJECTS_NAME."</td>\n";
+						echo "\t\t\t\t\t<td><input type=\"text\" value=\"".$row['name']."\" /></td>\n";
+						echo "\t\t\t\t\t<td>".STR_SUBJECTS_ROOM."</td>\n";
+						echo "\t\t\t\t\t<td><input type=\"text\" value=\"".$row['std_room']."\" /></td>\n";
+						echo "\t\t\t\t</tr>\n";
+						echo "\t\t\t\t<tr>\n";
+						echo "\t\t\t\t\t<td>".STR_SUBJECTS_TEACHER."</td>\n";
+						echo "\t\t\t\t\t<td><input type=\"text\" value=\"".$row['teacher']."\" /></td>\n";
+						echo "\t\t\t\t\t<td>".STR_SUBJECTS_COLOR."</td>\n";
+						echo "\t\t\t\t\t<td><input class=\"color\" value=\"".$row['color']."\" /></td>\n";
+						echo "\t\t\t\t</tr>\n";
+						echo "\t\t\t\t<tr><td>&nbsp;</td></tr>\n";
+					}
 				}
 				?>
 			</table>
