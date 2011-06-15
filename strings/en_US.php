@@ -47,7 +47,7 @@ define('STR_SUBJECTS_NAME', 'Name:');
 define('STR_SUBJECTS_TEACHER', 'Teacher:');
 define('STR_SUBJECTS_ROOM', 'Default room:');
 define('STR_SUBJECTS_COLOR', 'Color:');
-define('STR_TABLE_TIMETABLE', 'Stundenplan');
+define('STR_TABLE_TIMETABLE', 'Timetable');
 define('STR_TABLE_HELP', 'Choose the actual order of your timetable. If the subject takes place in its default room, leave the textbox below it empty and the default room will be assigned. Otherwise enter the room for this specific lesson.');
 define('STR_TABLE_LESSON', 'Lesson');
 define('STR_TABLE_CHOOSE', 'Choose...');
