@@ -60,7 +60,71 @@ else{
 		$userinsert = $db->query($query);
 		if(!$userinsert){
 			die('Query Error:'.$db->error);
-		}	
+		}
+		
+		// Getting user ID
+		$query = '	SELECT
+						username,
+						ID
+					FROM
+						`time-t-able_users`
+					WHERE
+						username = "'.$_POST['username'].'"';
+		$userIDcheck = $db->query($query);
+		if(!$userIDcheck){
+			die('Query Error:'.$db->error);
+		}
+		if($userIDcheck->num_rows){
+			$row = $userIDcheck->fetch_assoc();
+			$ID = $row['ID'];
+		}
+		
+		// Inserting empty db entries
+		// times
+		$values = '';
+		for ($i=1; $i < 13; $i++) { 
+			$values = $values.'("'.$ID.'", "'.$i.'")';
+			if($i<12) $values = $values.', ';
+		}
+		$query = '	INSERT INTO
+						`time-t-able_times`
+						(user_ID, ID)
+					VALUES
+						'.$values;
+		$timeinsert = $db->query($query);
+		if(!$timeinsert){
+			die('Query 1 Error:'.$db->error);
+		}
+		// subjects
+		$values = '';
+		for ($i=1; $i < 21; $i++) { 
+			$values = $values.'("'.$ID.'", "'.$i.'")';
+			if($i<20) $values = $values.', ';
+		}
+		$query = '	INSERT INTO
+						`time-t-able_subjects`
+						(user_ID, ID)
+					VALUES
+						'.$values;
+		$subjectinsert = $db->query($query);
+		if(!$subjectinsert){
+			die('Query 2 Error:'.$db->error);
+		}
+		// table
+		$values = '';
+		for ($i=1; $i < 51; $i++) { 
+			$values = $values.'("'.$ID.'", "'.$i.'")';
+			if($i<50) $values = $values.', ';
+		}
+		$query = '	INSERT INTO
+						`time-t-able_table`
+						(user_ID, fieldnumber)
+					VALUES
+						'.$values;
+		$tableinsert = $db->query($query);
+		if(!$tableinsert){
+			die('Query 3 Error:'.$db->error);
+		}
 		
 		// manual 'log in'
 		$_SESSION['login'] = '1';
