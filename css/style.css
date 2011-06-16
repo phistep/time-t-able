@@ -125,6 +125,19 @@ h1{
 	width: 50%;
 }
 
+.alert{
+	width: 500px;
+	padding:25px;
+}
+.error{
+	background-color: #ffadad;
+	border: #f00 2px dashed;
+}
+.success{
+	background-color: #d5ffad;
+	border: #0f0 2px dashed;
+}
+
 
 /* FOOTER */
 #footer{
