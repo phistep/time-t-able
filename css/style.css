@@ -110,6 +110,21 @@ h1{
 	text-align: left;
 }
 
+.lesson{}
+.time{
+	font-size: 10px;
+}
+.teacher{
+	font-size: 10px;
+	text-align: left;
+	width: 50%;
+}
+.room{
+	font-size: 10px;
+	text-align: right;
+	width: 50%;
+}
+
 
 /* FOOTER */
 #footer{

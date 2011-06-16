@@ -1,37 +1,27 @@
-<style type="text/css">
-	.stunde			{}
-	.Pause			{background-color: #fff; border: #000 1px dashed; color: #fff;}
-	.zeit			{font-size: 10px;}
-	.lehrer			{font-size: 10px; text-align: left; width: 50%;}
-	.raum			{font-size: 10px; text-align: right; width: 50%;}
-	/* Colored Style */
-	.Biologie 		{background-color: #b5b5b5;}
-	.Latein			{background-color: #fff; border: #000 1px solid;}
-	.Boersenspiel	{background-color: #fff; border: #000 1px solid;}
-	.Sport			{background-color: #fff; border: #000 1px solid;}
-	.Italienisch	{background-color: #fff; border: #000 1px solid;}
-	.Mathematik		{background-color: #71a2da;}
-	.Religion		{background-color: #c471da;}
-	.Physik			{background-color: #000; color: #fff;}
-	.Englisch		{background-color: #47cc38;}
-	.Wirtschaft-Recht {background-color: #e3b392; font-size: 14px;}
-	.Geographie		{background-color: #e3b392;}
-	.Deutsch 		{background-color: #ff4747;}
-	.Chemie			{background-color: #ffdd33;}
-	.Informatik		{background-color: #fff; border: #000 1px solid;}
-	.Geschichte		{background-color: #ffaa33;}
-	.Sozialkunde	{background-color: #ffaa33;}
-	.Profil			{background-color: #fff; border: #000 1px solid;}
-	.Musik			{background-color: #fff; border: #000 1px solid;} 
-	.Kunst			{background-color: #fff; border: #000 1px solid;}
-	
-	.lesson			{}
-	.time			{font-size: 10px;}
-	.teacher		{font-size: 10px; text-align: left; width: 50%;}
-	.room			{font-size: 10px; text-align: right; width: 50%;}
-	.subject_1		{background-color: #b5b5b5;}
+<style>
+	<?php
+		$query = "	SELECT
+						color							
+					FROM
+						`time-t-able_subjects`
+					WHERE
+						user_ID = \"".$_SESSION['ID']."\"
+					ORDER BY
+						ID";
+		$tablecheck = $db->query($query);
+		if(!$tablecheck){
+			die('Query Error:'.$db->error);
+		}
+		if($tablecheck->num_rows){
+			$i = 0;
+			while($row = $tablecheck->fetch_assoc()){
+				$i++;
+				if($row['color'])
+					echo ".subject_".$i."\t{background-color:#".$row['color']."}\n";
+			}
+		}
+	?>
 </style>
-
 
 <div class="centered main">
 	<h1>Your Timetable</h1>
