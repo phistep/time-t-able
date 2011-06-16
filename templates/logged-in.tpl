@@ -1,5 +1,4 @@
 <style type="text/css">
-	.disclaimer		{font-family: Courier; text-align: left;}
 	.stunde			{}
 	.Pause			{background-color: #fff; border: #000 1px dashed; color: #fff;}
 	.zeit			{font-size: 10px;}
@@ -25,16 +24,56 @@
 	.Profil			{background-color: #fff; border: #000 1px solid;}
 	.Musik			{background-color: #fff; border: #000 1px solid;} 
 	.Kunst			{background-color: #fff; border: #000 1px solid;}
+	
+	.lesson			{}
+	.time			{font-size: 10px;}
+	.teacher		{font-size: 10px; text-align: left; width: 50%;}
+	.room			{font-size: 10px; text-align: right; width: 50%;}
+	.subject_1		{background-color: #b5b5b5;}
 </style>
 
 
 <div class="centered main">
 	<h1>Your Timetable</h1>
 	<table border="0" cellpadding="2px" id="timetable">
-
+		<?php
+		$query = "	SELECT
+						class,
+						period
+					FROM
+						`time-t-able_users`
+					WHERE
+						ID = \"".$_SESSION['ID']."\"";
+		$generalcheck = $db->query($query);
+		if(!$generalcheck){
+			die('Query Error:'.$db->error);
+		}
+		if($generalcheck->num_rows){
+			$row = $generalcheck->fetch_assoc();
+				$class = $row['class'];
+				$period = $row['period'];
+		}
+		$query = "	SELECT
+						ID,
+						timespan
+					FROM
+						`time-t-able_times`
+					WHERE
+						user_ID = \"".$_SESSION['ID']."\"";
+		$timecheck = $db->query($query);
+		if(!$timecheck){
+			die('Query Error:'.$db->error);
+		}
+		if($timecheck->num_rows){
+			while($row = $timecheck->fetch_assoc()){
+				$timesarray[$row['ID']] = $row['timespan'];
+			}
+		}		
+		?>
+		
 		<!-- Headlines -->
 		<tr>
-			<td><h1>10c<br>2010/2011 HJ2</h1></td>
+			<td><h1><?php echo $class; ?><br><?php echo $period; ?></h1></td>
 			<td><h1><?php echo STR_DAY_MON; ?></h1></td>
 			<td><h1><?php echo STR_DAY_TUE; ?></h1></td>
 			<td><h1><?php echo STR_DAY_WED; ?></h1></td>
@@ -42,108 +81,65 @@
 			<td><h1><?php echo STR_DAY_FRI; ?></h1></td>
 		</tr>
 
-		<!-- 1. -->
-		<tr>
-			<td><div class="stunde">1. Stunde<br><span class="zeit">07:55 - 08:40</span></div></td>
-			<td><div class="Religion">Religion<br><span class="lehrer">Finkenberg</span> <span class="raum">N235</span></div></td>
-			<td><div class="Physik">Physik<br><span class="lehrer">Bock</span> <span class="raum">F09</span></div></td>
-			<td><div class="Physik">Physik<br><span class="lehrer">Bock</span> <span class="raum">F07</span></div></td>
-			<td><div class="Deutsch">Deutsch<br><span class="lehrer">Kramer</span> <span class="raum">N235</span></div></td>
-			<td><div class="Wirtschaft-Recht">Wirtschaft &amp; Recht<br><span class="lehrer">Hosak</span> <span class="raum">N235</span></div></td>
-		</tr>
+		<?php
+		for($i = 0; $i < 12; $i++){
+			echo"<tr><td><div class=\"lesson\">".($i+1).". ".STR_TABLE_LESSON."<br><span class=\"time\">".$timesarray[$i+1]."</span></div></td>";
+			for ($j=0; $j < 5; $j++) {
+				
+				$name = '';
+				$teacher = '';
+				$room = '';
+				$subject_ID = '';
+				
+				$query = "	SELECT
+								subject_ID,
+								room								
+							FROM
+								`time-t-able_table`
+							WHERE
+								user_ID = \"".$_SESSION['ID']."\"
+								AND fieldnumber = \"".((5*$i+$j)+1)."\"";
+				$tablecheck = $db->query($query);
+				if(!$tablecheck){
+					die('Query Error:'.$db->error);
+				}
+				if($tablecheck->num_rows){
+					$row = $tablecheck->fetch_assoc();
+					$room = $row['room'];
+					$subject_ID = $row['subject_ID'];
+				}
+				$query = "	SELECT
+								name,
+								teacher								
+							FROM
+								`time-t-able_subjects`
+							WHERE
+								user_ID = \"".$_SESSION['ID']."\"
+								AND ID = \"".$subject_ID."\"";
+				$tablecheck = $db->query($query);
+				if(!$tablecheck){
+					die('Query Error:'.$db->error);
+				}
+				if($tablecheck->num_rows){
+					$row = $tablecheck->fetch_assoc();
+					$name = $row['name'];
+					$teacher = $row['teacher'];
+				}
+				
+				echo "
+				<td>
+					<div class=\"subject_".$subject_ID."\">
+						".$name."<br>
+						<span class=\"teacher\">".$teacher."</span> <span class=\"room\">".$room."</span>
+					</div>
+				</td>";
 
-		<!-- 2. -->
-		<tr>
-			<td><div class="stunde">2. Stunde<br><span class="zeit">08:40 - 09:25</span></div></td>
-			<td><div class="Chemie">Chemie<br><span class="lehrer">Seefried</span> <span class="raum">F07</span></div></td>
-			<td><div class="Mathematik">Mathematik<br><span class="lehrer">Eisermann</span> <span class="raum">N235</span></div></td>
-			<td><div class="Latein">Latein<br><span class="lehrer">Pietschmann</span> <span class="raum">N235</span></div></td>
-			<td><div class="Geographie">Geographie<br><span class="lehrer">Klammer</span> <span class="raum">N235</span></div></td>
-			<td><div class="Englisch">Englisch<br><span class="lehrer">Kress</span> <span class="raum">N235</span></div></td>
-		</tr>
-
-		<!-- 3. -->
-		<tr>
-			<td><div class="stunde">3. Stunde<br><span class="zeit">09:40 - 10:25</span></div></td>
-			<td><div class="Latein">Latein<br><span class="lehrer">Pietschmann</span> <span class="raum">N235</span></div></td>
-			<td><div class="Sport">Sport<br><span class="lehrer">Kramer</span> <span class="raum">Sporthalle 2</span></div></td>
-			<td><div class="Biologie">Biologie<br><span class="lehrer">K&ouml;rner</span> <span class="raum">F17</span></div></td>
-			<td><div class="Latein">Latein<br><span class="lehrer">Pietschmann</span> <span class="raum">N235</span></div></td>
-			<td><div class="Sozialkunde">Sozialkunde<br><span class="lehrer">Toepffer</span> <span class="raum">N235</span></div></td>
-		</tr>
-
-		<!-- 4. -->
-		<tr>
-			<td><div class="stunde">4. Stunde<br><span class="zeit">10:25 - 11:10</span></div></td>
-			<td><div class="Englisch">Englisch<br><span class="lehrer">Kress</span> <span class="raum">N235</span></div></td>
-			<td><div class="Sport">Sport<br><span class="lehrer">Kramer</span> <span class="raum">Sporthalle 2</span></div></td>
-			<td><div class="Chemie">Chemie<br><span class="lehrer">Seefried</span> <span class="raum">F04</span></div></td>
-			<td><div class="Geschichte">Geschichte<br><span class="lehrer">Alin</span> <span class="raum">N235</span></div></td>
-			<td><div class="Deutsch">Deutsch<br><span class="lehrer">Kramer</span> <span class="raum">N235</span></div></td>
-		</tr>
-
-		<!-- 5. -->
-		<tr>
-			<td><div class="stunde">5. Stunde<br><span class="zeit">11:30 - 12:15</span></div></td>
-			<td><div class="Profil">Ch / Ph Profil<br><span class="lehrer">Seefried / Bock</span> <span class="raum">F07 / F09</span></div></td>
-			<td><div class="Geographie">Geographie<br><span class="lehrer">Klammer</span> <span class="raum">N235</span></div></td>
-			<td><div class="Mathematik">Mathematik<br><span class="lehrer">Eisermann</span> <span class="raum">N235</span></div></td>
-			<td><div class="Musik">Musik<br><span class="lehrer">Sonnleitner</span> <span class="raum">F44</span></div></td>
-			<td><div class="Informatik">Informatik<br><span class="lehrer">Greiner</span> <span class="raum">F15</span></div></td>
-		</tr>
-
-		<!-- 6. -->
-		<tr>
-			<td><div class="stunde">6. Stunde<br><span class="zeit">12:15 - 12:55</span></div></td>
-			<td><div class="Profil">Chemie Profil<br><span class="lehrer">Seefried</span> <span class="raum">F07</span></div></td>
-			<td><div class="Englisch">Englisch<br><span class="lehrer">Kress</span> <span class="raum">N235</span></div></td>
-			<td><div class="Deutsch">Deutsch<br><span class="lehrer">Kramer</span> <span class="raum">N235</span></div></td>
-			<td><div class="Informatik">Informatik<br><span class="lehrer">Greiner</span> <span class="raum">F15</span></div></td>
-			<td><div class="Mathematik">Mathematik<br><span class="lehrer">Eisermann</span> <span class="raum">N235</span></div></td>
-		</tr>
-
-		<!-- Pause -->
-		<tr>
-			<td><div class="stunde">Pause<br><span class="zeit">13:00 - 13:45</span></div></td>
-			<td><div class="Latein">Latein Int.<br><span class="lehrer">Pietschmann</span> <span class="raum">N235</span></div></td>
-			<td><div class="Pause">Mittags-<br>Pause</div></td>
-			<td><div class="Pause">Mittags-<br>Pause</div></td>
-			<td><div class="Pause">Mittags-<br>Pause</div></td>
-			<td></td>
-		</tr>
-
-		<!-- 7. -->
-		<tr>
-			<td><div class="stunde">7. Stunde<br><span class="zeit">13:45 - 14:30</span></div></td>
-			<td></td>
-			<td><div class="Wirtschaft-Recht">Wirtschaft &amp; Recht<br><span class="lehrer">Hosak</span> <span class="raum">N235</span></div></td>
-			<td><div class="Italienisch">Italienisch<br><span class="lehrer">von Rhein</span> <span class="raum">202</span></div></td>
-			<td><div class="Kunst">Kunst<br><span class="lehrer">Rudloff-Seitz</span> <span class="raum">E40</span></div></td>
-			<td></td>
-		</tr>
-
-		<!-- 8. -->
-		<tr>
-			<td><div class="stunde">8. Stunde<br><span class="zeit">14:30 - 15:15</span></div></td>
-			<td></td>
-			<td><div class="Biologie">Biologie<br><span class="lehrer">K&ouml;rner</span> <span class="raum">F09</span></div></td>
-			<td><div class="Italienisch">Italienisch<br><span class="lehrer">von Rhein</span> <span class="raum">202</span></div></td>
-			<td><div class="Religion">Religion<br><span class="lehrer">Finkenberg</span> <span class="raum">N235</span></div></td>
-			<td></td>
-		</tr>
-	
-		<!-- 9. -->
-		<tr>
-			<td><div class="stunde">9. Stunde<br><span class="zeit">15:15 - 16:00</span></div></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
+			}
+			echo "</tr>";
+		}		
+		?>
 
 	</table>
-
 	<div class="optionpane">
 		<?php
 		$query = "	SELECT
@@ -354,18 +350,16 @@
 					}
 				
 					// Displaying the table
-					for($i = 0; $i < 10; $i++){
-						echo"<tr><td>".($i+1).". ".STR_TABLE_LESSON;
+					for($i = 0; $i < 12; $i++){
+						echo"<tr><td>".($i+1).". ".STR_TABLE_LESSON."</td>";
 						for ($j=0; $j < 5; $j++) { 
 							echo "
 							<td>
-								<div class=\"\">
-									<select name=\"subject_".((5*$i+$j)+1)."\">
-										<option value=\"\">".STR_TABLE_CHOOSE."</option>\n".$subjectlist."
-									</select>
-									<br>
-									<input name=\"room_".((5*$i+$j)+1)."\" type=\"text\" size=\"5\" value=\"\">
-								</div>
+								<select name=\"subject_".((5*$i+$j)+1)."\">
+									<option value=\"\">".STR_TABLE_CHOOSE."</option>\n".$subjectlist."
+								</select>
+								<br>
+								<input name=\"room_".((5*$i+$j)+1)."\" type=\"text\" size=\"5\" value=\"\">
 							</td>";
 
 						}

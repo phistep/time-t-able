@@ -112,9 +112,9 @@ else{
 		}
 		// table
 		$values = '';
-		for ($i=1; $i < 51; $i++) { 
+		for ($i=1; $i < 61; $i++) { 
 			$values = $values.'("'.$ID.'", "'.$i.'")';
-			if($i<50) $values = $values.', ';
+			if($i<60) $values = $values.', ';
 		}
 		$query = '	INSERT INTO
 						`time-t-able_table`

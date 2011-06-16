@@ -77,7 +77,7 @@ else{
 			case 'table':
 				// table
 				$query = '';
-				for ($i=1; $i < 51; $i++) {
+				for ($i=1; $i < 61; $i++) {
 					$room = '';
 					if($_POST['room_'.$i] != ""){
 						$room = $_POST['room_'.$i];
