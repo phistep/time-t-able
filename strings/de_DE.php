@@ -28,6 +28,7 @@ define('STR_REGISTER_DATA_INFO', 'Ich nehme deine Privatsph&auml;re sehr ernst. 
 // PUBLIC
 define('STR_PUBLIC_SHAREING', ' zeigt seinen Stundenplan online. Wenn du das auch willst, kannst du dich <a href="'.MAIN_URL.'action/register.php">hier</a> registrieren!');
 define('STR_PUBLIC_DISCLAIMER', 'Wenn Sie Missbrauch feststellen oder ihre Privatsph&auml;re verletzt sehen, melden Sie das an <a href="mailto:'.ABUSE_EMAIL.'">'.ABUSE_EMAIL.'</a> und erw&auml;hnen Sie "'.LOGO_NAME.' - Abuse - <BENUTZERNAME>" im Betreff. Ich &uuml;bernehme keine Verantwortung f&uuml;r jedwegen Missbrauch dieses Dienstes. Dies hier sind benutzergenerierte Daten, f&uuml;r die ich icht verantwortlich bin.');
+define('STR_PUBLIC_NO', ' benutzt '.LOGO_NAME.' nicht oder ver&ouml;ffentlicht seinen Stundenplan nicht online!');
 
 // MAIN
 define('STR_SAVE_BUTTON', 'Speichern');

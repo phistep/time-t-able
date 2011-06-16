@@ -16,8 +16,12 @@
 	<?php
 	if($_SESSION['login'] == '1'){
 		// logged in
-		echo "<link rel=\"stylesheet\" media=\"screen\" type=\"text/css\" href=\"css/usercss.php\" />\n";
+		echo "<link rel=\"stylesheet\" media=\"screen\" type=\"text/css\" href=\"css/usercss.php?u=".$_SESSION['username']."\" />\n";
 		echo "\n\t<!-- JS -->\n\t<script type=\"text/javascript\" src=\"js/jscolor/jscolor.js\"></script>\n";
+	}
+	if(isset($_GET['view'])){
+		// logged in
+		echo "<link rel=\"stylesheet\" media=\"screen\" type=\"text/css\" href=\"css/usercss.php?u=".$_GET['view']."\" />\n";
 	}
 	?>
 	

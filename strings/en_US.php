@@ -1,4 +1,7 @@
 <?php
+// OTHER SGTRINGS
+include('info.php');
+
 // HEADER
 define('STR_TITLE_HOME', 'HOME');
 define('STR_TITLE_LOGIN', 'SIGN IN');
@@ -24,6 +27,11 @@ define('STR_REGISTER_CAPTCHA', 'Captcha:');
 define('STR_REGISTER_GO_BUTTON', 'Make me productive!');
 define('STR_REGISTER_DATA_LEGEND', 'Your Data:');
 define('STR_REGISTER_DATA_INFO', 'I take privacy very seriously. I will not use your email, but support ect. and I will never share it. I hate Spam, too. Your password will never be stored in clear text.');
+
+// PUBLIC
+define('STR_PUBLIC_SHAREING', ' is shareing his timetable online. If you also want to do that, you can register <a href="'.MAIN_URL.'action/register.php">here</a>!');
+define('STR_PUBLIC_DISCLAIMER', 'If you notice any abuse or feel your privacy injured, please report to <a href="mailto:'.ABUSE_EMAIL.'">'.ABUSE_EMAIL.'</a> and mention "'.LOGO_NAME.' - Abuse - <USERNAME>" in the subject. I don\'t take any responsibility for any misuse of this service. This is user generated data, which I am not responsible for.');
+define('STR_PUBLIC_NO', ' is not a user of '.LOGO_NAME.' or has decided not to share the timetable publicly!');
 
 // MAIN
 define('STR_SAVE_BUTTON', 'Save');
