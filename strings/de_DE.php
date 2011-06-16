@@ -1,7 +1,6 @@
 <?php
 // OTHER SGTRINGS
 include('info.php');
-include('general.php');
 
 // HEADER
 define('STR_TITLE_HOME', 'STARTSEITE');
