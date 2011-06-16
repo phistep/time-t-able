@@ -310,6 +310,7 @@
 					?>
 				</table>
 				<input class="button" value="<?php echo STR_SAVE_BUTTON; ?>" name="formaction" type="submit" />
+			</form>
 		<hr />
 	</div>
 	<div class="optionpane">
@@ -360,7 +361,7 @@
 							<td>
 								<div class=\"\">
 									<select name=\"subject_".((5*$i+$j)+1)."\">
-										<option>".STR_TABLE_CHOOSE."</option>\n".$subjectlist."
+										<option value=\"\">".STR_TABLE_CHOOSE."</option>\n".$subjectlist."
 									</select>
 									<br>
 									<input name=\"room_".((5*$i+$j)+1)."\" type=\"text\" size=\"5\" value=\"\">
