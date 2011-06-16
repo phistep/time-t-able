@@ -7,6 +7,6 @@ define('ABOUT_URL', '#'); // Linking to the about page, probably containing lega
 define('CONTACT_URL', '#'); // Link for contacting the webmaster, probably a mailto:// address
 define('ABUSE_EMAIL', '#'); // Email address for abuse ande complains
 define('MAIN_URL', 'http://localhost/~Philipp/time-t-able/'); // Url of the root directory of the site
-define('POWERED_BY', 'Powered by <a href="#">time(t)able</a>') // Powered by message. This is the perfect place to fullfill the 'name the authorship' part of the cc license. Please leave it and the link there :)
-
+define('POWERED_BY', 'Powered by <a href="#">time(t)able</a>'); // Powered by message. This is the perfect place to fullfill the 'name the authorship' part of the cc license. Please leave it and the link there :)
+define('SEPERATOR', '&middot;'); // Seperator between link lists
 ?>

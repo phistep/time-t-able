@@ -7,6 +7,9 @@ include('general.php');
 define('STR_TITLE_HOME', 'HOME');
 define('STR_TITLE_LOGIN', 'SIGN IN');
 define('STR_TITLE_REGISTER', 'REGISTER');
+define('STR_LINK_LOGOUT', '<a href="'.MAIN_URL.'action/logout.php">Sign Out</a>');
+define('STR_LINK_LOGIN', '<a href="'.MAIN_URL.'action/login.php">Sign In</a>');
+define('STR_LINK_REGISTER', '<a href="'.MAIN_URL.'action/register.php">Register</a>');
 
 // FOOTER
 define('STR_ABOUT', 'About');
