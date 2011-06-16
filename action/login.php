@@ -66,6 +66,7 @@ else{
 		// Viewing
 		
 		$title = STR_TITLE_LOGIN;
+		$linklist = STR_LINK_REGISTER;
 
 		// Header
 		include('../templates/header.tpl');

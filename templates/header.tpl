@@ -25,16 +25,14 @@
 	?>
 	
 	<!-- Title -->
-	<title><?php echo "$title"; ?> &middot; <?php echo LOGO_NAME; ?></title>
+	<title><?php echo "$title"; ?> <?php echo SEPERATOR; ?> <?php echo LOGO_NAME; ?></title>
 </head>
 <body>
 	<table width="100%" border="0" id="header">
 		<tr>
-			<td class="headerleft"><?php echo LOGO_NAME; ?></td>
-			<td class="headermiddle"><?php echo "$title"?></td>
-			<td class="headerright">
-				<?php /* link list depending on site */?>
-			</td>
+			<td class="headerleft"><a href="<?php echo MAIN_URL; ?>"><?php echo LOGO_NAME; ?></a></td>
+			<td class="headermiddle"><?php echo $title ?></td>
+			<td class="headerright"><?php echo $linklist ?></td>
 		</tr>
 	</table>
 	<hr />

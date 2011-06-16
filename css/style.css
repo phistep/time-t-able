@@ -11,7 +11,7 @@ h1{
 	height:20px;
 }
 .headerleft{
-	width:100px;
+	width:250px;
 	float:left;
 	height:20px;
 	position:relative;
@@ -23,7 +23,7 @@ h1{
 	position:relative;
 }
 .headerright{
-	width:100px;
+	width:250px;
 	float:right;
 	height:20px;
 	position:relative;

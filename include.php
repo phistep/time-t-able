@@ -2,7 +2,7 @@
 session_start(); // Starting a session
 include('strings/pw.php'); // Loading passwords and login information
 include('general/connect-to-sql.php'); // Establishing connection to sql database
-include('strings/info.php'); // Loading general strings
+include('strings/info.php'); // Loading information strings
 
 // Check for language
 if(preg_match("/^de.*/", $_SERVER['HTTP_ACCEPT_LANGUAGE']))

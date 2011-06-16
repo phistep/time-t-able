@@ -135,6 +135,7 @@ else{
 		// Viewing
 		
 		$title = STR_TITLE_REGISTER;
+		$linklist = STR_LINK_LOGIN;
 
 		// Header
 		include('../templates/header.tpl');
