@@ -12,6 +12,8 @@
 	
 	<!-- CSS -->
 	<link rel="stylesheet" media="screen" type="text/css" href="<?php echo MAIN_URL; ?>css/style.css" title="Standart" />
+	
+	<script type="text/javascript" src="js/script.js"></script>
 	<?php
 	if($_SESSION['login'] == '1'){
 		// logged in

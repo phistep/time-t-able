@@ -50,6 +50,7 @@ define('STR_GENERAL_CLASS', 'Klasse/Stufe:');
 define('STR_GENERAL_PUBLIC', '&Ouml;ffenlticher Stundenplan:');
 define('STR_GENERAL_LINK', 'Dein &ouml;ffentlicher Link:');
 define('STR_GENERAL_DEL_SHOW', 'Account l&ouml;schen');
+define('STR_GENERAL_DEL_HIDE', 'Abbrechen');
 define('STR_GENERAL_DEL_CONFIRM', 'Passwort best&auml;tigen:');
 define('STR_GENERAL_DEL_NOUNDO', 'Dies kann nicht r&uuml;ckg&auml;ngig gemacht werden!');
 define('STR_GENERAL_DEL_GO', 'Auf Wiedersehen!');

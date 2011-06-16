@@ -50,6 +50,7 @@ define('STR_GENERAL_CLASS', 'Class:');
 define('STR_GENERAL_PUBLIC', 'Public timetable:');
 define('STR_GENERAL_LINK', 'Your public link:');
 define('STR_GENERAL_DEL_SHOW', 'Delete account');
+define('STR_GENERAL_DEL_HIDE', 'Cancel');
 define('STR_GENERAL_DEL_CONFIRM', 'Confirm password:');
 define('STR_GENERAL_DEL_NOUNDO', 'You can\'t undo this action!');
 define('STR_GENERAL_DEL_GO', 'Good Bye!');

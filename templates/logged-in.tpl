@@ -130,8 +130,9 @@
 		
 		?>
 		
-		<a href="#"><h1><?php echo STR_GENERAL_PREFERENCES; ?></h1></a>
-		<hr />
+		<a href="javascript:changeVisible('generalpane');"><h1><?php echo STR_GENERAL_PREFERENCES; ?></h1></a>
+		<div id="generalpane" style="display:none;">
+			<hr />
 			<form method="post" action="action/save.php">
 				<input type="hidden" name="section" value="general" />
 				<table>
@@ -147,16 +148,16 @@
 						<td><label for="public"><?php echo STR_GENERAL_PUBLIC; ?></label></td>
 						<td><input name="public" id="public" type="checkbox" <?php echo $public; ?> /></td>
 					</tr>
-					<tr>
-						<td><label for="link"><?php echo STR_GENERAL_LINK; ?></label></td>
-						<td><input type="text" id="link" readonly="readonly" value="<?php echo MAIN_URL; ?>?view=<?php echo $_SESSION['username']; ?>" /></td>
+					<tr id="publiclink">
+						<td><label for="link"><a href="<?php echo MAIN_URL; ?>?view=<?php echo $_SESSION['username']; ?>"><?php echo STR_GENERAL_LINK; ?></a></label></td>
+						<td><input type="text" id="link" readonly="readonly" onFocus="javascript:selectAll('link');" value="<?php echo MAIN_URL; ?>?view=<?php echo $_SESSION['username']; ?>" /></td>
 					</tr>
 				</table>
 				<input class="button" value="<?php echo STR_SAVE_BUTTON; ?>" name="formaction" type="submit" />	
 			</form>
 			<br />
-			<input type="button" value="<?php echo STR_GENERAL_DEL_SHOW; ?>" />
-			<form method="post" action="action/delete.php">
+			<input type="button" id="delete-button" value="<?php echo STR_GENERAL_DEL_SHOW; ?>" onClick="javascript:changeVisible('delete-form'); changeValue('delete-button', '<?php echo STR_GENERAL_DEL_SHOW; ?>', '<?php echo STR_GENERAL_DEL_HIDE; ?>');"/>
+			<form method="post" action="action/delete.php" id="delete-form" style="display:none;">
 				<table>
 					<tr>
 						<td><label for="password"><?php echo STR_GENERAL_DEL_CONFIRM; ?></label></td>
@@ -168,6 +169,7 @@
 					</tr>
 				</table>
 			</form>
+		</div>
 		<hr />
 	</div>
 	<div class="optionpane">
@@ -191,8 +193,9 @@
 		
 		?>
 		
-		<a href="#"><h1><?php echo STR_TIMES; ?></h1></a>
+		<a href="javascript:changeVisible('timespane');"><h1><?php echo STR_TIMES; ?></h1></a>
 		<hr />
+		<div id="timespane" style="display:none;">
 			<form method="post" action="action/save.php">
 				<input type="hidden" name="section" value="times" />
 				<table>
@@ -223,11 +226,13 @@
 				</table>
 				<input class="button" value="<?php echo STR_SAVE_BUTTON; ?>" name="formaction" type="submit" />
 			</form>
-		<hr />
+			<hr />
+		</div>
 	</div>
 	<div class="optionpane">
-		<a href="#"><h1><?php echo STR_SUBJECTS_SUBJECTS; ?></h1></a>
+		<a href="javascript:changeVisible('subjectpane');"><h1><?php echo STR_SUBJECTS_SUBJECTS; ?></h1></a>
 		<hr />
+		<div id="subjectpane" style="display:none;">
 			<form method="post" action="action/save.php">
 				<input type="hidden" name="section" value="subjects" />
 				<input class="button" value="<?php echo STR_SAVE_BUTTON; ?>" name="formaction" type="submit" />
@@ -272,11 +277,14 @@
 				</table>
 				<input class="button" value="<?php echo STR_SAVE_BUTTON; ?>" name="formaction" type="submit" />
 			</form>
-		<hr />
+			<hr />
+		</div>
 	</div>
 	<div class="optionpane">
-		<a href="#"><h1><?php echo STR_TABLE_TIMETABLE; ?></h1></a>
-		<hr />
+		<a href="javascript:changeVisible('tablepane');"><h1><?php echo STR_TABLE_TIMETABLE; ?></h1></a>
+		
+		<div id="tablepane" style="display:none;">
+			<hr />
 			<form method="post" action="action/save.php">
 				<input type="hidden" name="section" value="table" />
 				
@@ -364,6 +372,7 @@
 				</table>
 				<input class="button" value="<?php echo STR_SAVE_BUTTON; ?>" name="formaction" type="submit" />
 			</form>
-		<hr />
+			<hr />
+		</div>
 	</div>
 </div>
