@@ -2,6 +2,8 @@
 // Global includes
 include('../include.php');
 
+header("Content-type: text/css");
+
 $query = "	SELECT
 				color							
 			FROM

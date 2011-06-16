@@ -16,7 +16,7 @@
 	<?php
 	if($_SESSION['login'] == '1'){
 		// logged in
-		echo "\t<link rel=\"stylesheet\" media=\"screen\" type=\"text/css\" href=\"css/usercss.php\" />\n";
+		echo "<link rel=\"stylesheet\" media=\"screen\" type=\"text/css\" href=\"css/usercss.php\" />\n";
 		echo "\n\t<!-- JS -->\n\t<script type=\"text/javascript\" src=\"js/jscolor/jscolor.js\"></script>\n";
 	}
 	?>
