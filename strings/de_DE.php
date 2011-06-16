@@ -38,6 +38,7 @@ define('STR_PUBLIC_NO', ' benutzt '.LOGO_NAME.' nicht oder ver&ouml;ffentlicht s
 
 // MAIN
 define('STR_SAVE_BUTTON', 'Speichern');
+define('STR_YOUR_TIMETABLE', 'Dein Stundenplan');
 define('STR_DAY_MON', 'Montag');
 define('STR_DAY_TUE', 'Dienstag');
 define('STR_DAY_WED', 'Mittwoch');
@@ -59,8 +60,24 @@ define('STR_SUBJECTS_TEACHER', 'Lehrer:');
 define('STR_SUBJECTS_ROOM', 'Standart Raum:');
 define('STR_SUBJECTS_COLOR', 'Farbe:');
 define('STR_TABLE_TIMETABLE', 'Stundenplan');
-define('STR_TABLE_HELP', 'Ver&auml;ndere hier deine genaue Stundenplananordnung. Wenn das Fach in seinem Standartraum statt findet, lass die Textbox leer und der Standartraum wird hinzugef&uuml;gt. Ansonsten füge den gesonderten Raum für diese spezielle Stunde unten ein.');
+define('STR_TABLE_HELP', 'Ver&auml;ndere hier deine genaue Stundenplananordnung. Wenn das Fach in seinem Standartraum statt findet, lass die Textbox leer und der Standartraum wird hinzugef&uuml;gt. Ansonsten f&uuml;ge den gesonderten Raum f&uuml;r diese spezielle Stunde unten ein.');
 define('STR_TABLE_LESSON', 'Stunde');
 define('STR_TABLE_CHOOSE', 'W&auml;hlen...');
 
+// ALERTS
+define('STR_ALERT_LOGOUT_SUCCESS', "Erfolgreich ausgeloggt!");
+define('STR_ALERT_LOGIN_SUCCESS', "Erfolgreich eingeloggt!");
+define('STR_ALERT_NOTLOGGEDIN', "Du bist nicht einmal eingeloggt!");
+define('STR_ALERT_ALREADYLOGGEDIN', "Du bist schon eingeloggt!");
+define('STR_ALERT_INVALIDFORM', "Invalides Formular! Bitte benutze nur Formulare von der Website");
+define('STR_ALERT_DELETED', "Dein Account wurde erfolgreich gel&ouml;scht! Auf Wiedersehen!");
+define('STR_ALERT_WRONGPW', "Das Passwort war falsch!");
+define('STR_ALERT_WRONGUSERNAME', "Der Benutzername war falsch!");
+define('STR_ALERT_REGISTER_CAPTCHA', "Du musst das Captcha korrekt eingeben!");
+define('STR_ALERT_REGISTER_PASSWORDS', "Die eingegebenen Passw&ouml;rter m&uumlssen identisch sein!");
+define('STR_ALERT_REGISTER_INVALID_USERNAME', "Der Benutzername ist nicht g&uuml;ltig! Er muss zwischen 3 und 30 Zeichen haben und darf nur Gro&szlig;- und Kleinbuchstaben sowie Zahlen enthalten.");
+define('STR_ALERT_REGISTER_EMAIL', "Die eingegebene Emailadresse ist nicht g&uuml;ltig!");
+define('STR_ALERT_REGISTER_TAKEN_USERNAME', "Tut mir leid, der gew&uuml;nschte Benutzername ist bereits vergeben. Probiere einen anderen aus!");
+define('STR_ALERT_REGISTER_SUCCESS', "Registrierung erfolgreich! Danke, dass du ".LOGO_NAME." auspobierst! Du wirst jetzt eingeloggt und kannst sofort loslegen!");
+define('STR_ALERT_SAVE_SUCCESSFULL', "Erfolgreich gespeichert!");
 ?>

@@ -4,7 +4,7 @@ include('../include.php');
 
 if($_SESSION['login'] == '1'){
 	// Already logged in, no use for this script
-	echo "logged in";
+	alert(STR_ALERT_ALREADYLOGGEDIN, "error", MAIN_URL, 3);
 }
 else{
 	// Choose processing option: Viewing or database action
@@ -12,7 +12,7 @@ else{
 		// Database action
 		// Check for invalid forms
 		if(!isset($_POST['username'], $_POST['password'])){
-			// handle invalid form
+			alert(STR_ALERT_INVALIDFORM, "error", MAIN_URL.'action/login.php', 3);
 		}
 		$password = $_POST['password'];
 		
@@ -51,15 +51,16 @@ else{
 						$_SESSION['login'] = '1';
 						$_SESSION['ID'] = $ID;
 						$_SESSION['username'] = $_POST['username'];
+						alert(STR_ALERT_LOGIN_SUCCESS, "success", MAIN_URL, 3);
 					}
 					else{
-						// user fail handling
+						alert(STR_ALERT_WRONGPW, "error", MAIN_URL.'action/login.php', 3);
 					}
 				}
 			}
 		}
 		else{
-			// user fail handling
+			alert(STR_ALERT_WRONGUSERNAME, "error", MAIN_URL.'action/login.php', 3);
 		}
 	}
 	else{

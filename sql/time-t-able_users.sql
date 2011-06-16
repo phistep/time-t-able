@@ -3,8 +3,8 @@ CREATE TABLE IF NOT EXISTS `time-t-able_users` (
   `email` varchar(100) NOT NULL,
   `username` varchar(30) NOT NULL,
   `pw_hash` varchar(40) NOT NULL,
-  `public` int(1) NOT NULL,
+  `public` int(1) NOT NULL DEFAULT '0',
   `class` varchar(20) DEFAULT NULL,
   `period` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-)
+);

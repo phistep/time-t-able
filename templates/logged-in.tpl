@@ -1,5 +1,5 @@
 <div class="centered main">
-	<h1>Your Timetable</h1>
+	<h1><?php echo STR_YOUR_TIMETABLE; ?></h1>
 	<table border="0" cellpadding="2px" id="timetable">
 		<?php
 		$query = "	SELECT

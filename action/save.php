@@ -4,6 +4,7 @@ include('../include.php');
 
 if($_SESSION['login'] != '1'){
 	// not logged in, can't update any tables for noone
+	alert(STR_ALERT_ALREADYLOGGEDIN, "error", MAIN_URL, 3);
 }
 else{
 	// Only processing
@@ -31,6 +32,7 @@ else{
 				if(!$generalcheck){
 					die('Query Error:'.$db->error);
 				}
+				alert(STR_ALERT_SAVE_SUCCESSFULL, "success", MAIN_URL, 1);
 			break;
 			
 			case 'times':
@@ -50,7 +52,7 @@ else{
 				if(!$timecheck){
 					die('Query Error:'.$db->error);
 				}
-
+				alert(STR_ALERT_SAVE_SUCCESSFULL, "success", MAIN_URL, 1);
 			break;
 			
 			case 'subjects':
@@ -72,6 +74,7 @@ else{
 				if(!$subjectcheck){
 					die('Query Error:'.$db->error);
 				}
+				alert(STR_ALERT_SAVE_SUCCESSFULL, "success", MAIN_URL, 1);
 			break;
 			
 			case 'table':
@@ -114,9 +117,9 @@ else{
 				if(!$subjectcheck){
 					die('Query Error:'.$db->error);
 				}
+				alert(STR_ALERT_SAVE_SUCCESSFULL, "success", MAIN_URL, 1);
 			break;
-			
-			default:
+
 		}
 	}
 }

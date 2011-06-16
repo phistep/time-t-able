@@ -4,7 +4,7 @@ include('../include.php');
 
 if($_SESSION['login'] == '1'){
 	// Already logged in, no use for this script
-	echo "logged in";
+	alert(STR_ALERT_ALREADYLOGGEDIN, "error", MAIN_URL, 3);
 }
 else{
 	// Choose processing option: Viewing or database action
@@ -13,23 +13,23 @@ else{
 		// Check for invalid forms
 		if(!isset($_POST['username'], $_POST['password'], $_POST['rep-password'], $_POST['email'], $_POST['captcha'])){
 			// handle invalid form
-			die("invalid form");
+			alert(STR_ALERT_INVALIDFORM, "error", MAIN_URL.'action/register.php', 3);
 		}
 		if ($_SESSION['captcha'] != sha1($_POST['captcha'])) {
 			// handle invalid captcha
-			die("invalid captcha");
+			alert(STR_ALERT_REGISTER_CAPTCHA, "error", MAIN_URL.'action/register.php', 5);
 		}
 		if($_POST['rep-password'] != $_POST['password']){
 			// handle inconsistent passwords
-			die("inconsistent passwords");
+			alert(STR_ALERT_REGISTER_PASSWORDS, "error", MAIN_URL.'action/register.php', 5);
 		}
 		if(!preg_match("/^[A-Za-z0-9]{3,30}$/", $_POST['username'])){
 			// handle invalid username
-			die("invalid username");
+			alert(STR_ALERT_REGISTER_INVALID_USERNAME, "error", MAIN_URL.'action/register.php', 5);
 		}
 		if(!preg_match("/^.+@.+\..+$/", $_POST['email'])){
 			// handle fake email
-			die("fake email");
+			alert(STR_ALERT_REGISTER_EMAIL, "error", MAIN_URL.'action/register.php', 5);
 		}
 		$query = "	SELECT
 						username
@@ -45,11 +45,10 @@ else{
 			while($row = $usernamecheck->fetch_assoc()){
 				if ($row['username'] == $_POST['username']){
 					// handle taken username
-					echo "username already taken";
+					alert(STR_ALERT_REGISTER_TAKEN_USERNAME, "error", MAIN_URL.'action/register.php', 5);
 				}
 			}
 		}
-		echo "done";
 		
 		// Creating user db entry
 		$query = '	INSERT INTO
@@ -130,6 +129,8 @@ else{
 		$_SESSION['login'] = '1';
 		$_SESSION['ID'] = $ID;
 		$_SESSION['username'] = $_POST['username'];
+		
+		alert(STR_ALERT_REGISTER_SUCCESS, "success", MAIN_URL, 5);
 	}
 	else{
 		// Viewing

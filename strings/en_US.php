@@ -38,6 +38,7 @@ define('STR_PUBLIC_NO', ' is not a user of '.LOGO_NAME.' or has decided not to s
 
 // MAIN
 define('STR_SAVE_BUTTON', 'Save');
+define('STR_YOUR_TIMETABLE', 'Dein Stundenplan');
 define('STR_DAY_MON', 'Monday');
 define('STR_DAY_TUE', 'Tuesday');
 define('STR_DAY_WED', 'Wednesday');
@@ -63,4 +64,20 @@ define('STR_TABLE_HELP', 'Choose the actual order of your timetable. If the subj
 define('STR_TABLE_LESSON', 'Lesson');
 define('STR_TABLE_CHOOSE', 'Choose...');
 
+// ALERTS
+define('STR_ALERT_LOGOUT_SUCCESS', "Signed out successfully!");
+define('STR_ALERT_LOGIN_SUCCESS', "Signed in successfully!");
+define('STR_ALERT_NOTLOGGEDIN', "You aren't even logged in!");
+define('STR_ALERT_ALREADYLOGGEDIN', "You are already logged in!");
+define('STR_ALERT_INVALIDFORM', "Invalid form! Please use only forms from the website.");
+define('STR_ALERT_DELETED', "Youre account has been deleted successfully! Goodbye!");
+define('STR_ALERT_WRONGPW', "The password was wrong!");
+define('STR_ALERT_WRONGUSERNAME', "The username was wrong!");
+define('STR_ALERT_REGISTER_CAPTCHA', "You have to enter the Captcha correctly!");
+define('STR_ALERT_REGISTER_PASSWORDS', "The entered passwords were not identical!");
+define('STR_ALERT_REGISTER_INVALID_USERNAME', "The username was invalid! It has to be between 3 and 30 characters and may only contain upper- and lowercase letters and numbers.");
+define('STR_ALERT_REGISTER_EMAIL', "The entered email was not valid!");
+define('STR_ALERT_REGISTER_TAKEN_USERNAME', "I'm sorry, but the chosen username is already taken. You have to make a different choice!");
+define('STR_ALERT_REGISTER_SUCCESS', "Registration successfull! Thanks for giving ".LOGO_NAME." a try! You will now be logged in and ready to go!");
+define('STR_ALERT_SAVE_SUCCESSFULL', "Saved successfully!");
 ?>

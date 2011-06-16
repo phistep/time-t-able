@@ -5,7 +5,7 @@ include('../include.php');
 if($_SESSION['login'] == '1'){
 	
 	if(!isset($_POST['password'])){
-		// handle invalid form
+		alert(STR_ALERT_INVALIDFORM, "error", MAIN_URL, 3);
 	}
 	// check for right password
 	$query = "	SELECT
@@ -48,18 +48,17 @@ if($_SESSION['login'] == '1'){
 				die('Query Error: '.$db->error);
 			}
 			
-			// else alert for user being deleted
-			echo "deleted";
-			
 			// manual logout
 			$_SESSION = array();
+			
+			alert(STR_ALERT_DELETED, "success", MAIN_URL, 5);
 		}
 		else{
-			// user fail handling
+			alert(STR_ALERT_WRONGPW, "error", MAIN_URL.'#general', 3);
 		}
 	}
 }
 else{
-	// Not logged in, can't delete
+	alert(STR_ALERT_NOTLOGGEDIN, "error", MAIN_URL, 3);
 }
 ?>
