@@ -6,7 +6,6 @@
 	<!-- Meta Data -->
 	<meta http-equiv="Content-Language" content="en" />
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-	<meta name="generator" content="TextMate http://macromates.com/" />
 	<meta name="author" content="<?php echo AUTHOR; ?>" />
 	<meta name="keywords" content="timetable" />
 	<meta name="date" content="<?php echo C_DATE; ?>" />
