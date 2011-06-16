@@ -294,37 +294,67 @@
 						<td><h1><?php echo STR_DAY_FRI; ?></h1></td>
 					</tr>
 					<?php
-					// get all subjects
-					$query = "	SELECT
-									name,
-									ID
-								FROM
-									`time-t-able_subjects`
-								WHERE
-									user_ID = \"".$_SESSION['ID']."\"";
-					$subjectcheck = $db->query($query);
-					if(!$subjectcheck){
-						die('Query Error:'.$db->error);
-					}
-					if($subjectcheck->num_rows){
-						while($row = $subjectcheck->fetch_assoc()){
-							if ($row['name'] != ''){
-								$subjectlist = $subjectlist."\t\t\t\t\t\t\t\t\t".'<option value="'.$row['ID'].'">'.$row['name'].'</option>'."\n";
-							}
-						}
-					}
-				
 					// Displaying the table
 					for($i = 0; $i < 12; $i++){
 						echo"<tr><td>".($i+1).". ".STR_TABLE_LESSON."</td>";
-						for ($j=0; $j < 5; $j++) { 
+						for ($j=0; $j < 5; $j++) {
+							
+							$name = '';
+							$room = '';
+							$subject_ID = '';
+
+							$query = "	SELECT
+											subject_ID,
+											room								
+										FROM
+											`time-t-able_table`
+										WHERE
+											user_ID = \"".$_SESSION['ID']."\"
+											AND fieldnumber = \"".((5*$i+$j)+1)."\"";
+							$tablecheck = $db->query($query);
+							if(!$tablecheck){
+								die('Query Error:'.$db->error);
+							}
+							if($tablecheck->num_rows){
+								$row = $tablecheck->fetch_assoc();
+								$room = $row['room'];
+								$subject_ID = $row['subject_ID'];
+							}
+							
+							// get all subjects
+							$subjectlist = '';
+							$query = "	SELECT
+											name,
+											ID
+										FROM
+											`time-t-able_subjects`
+										WHERE
+											user_ID = \"".$_SESSION['ID']."\"";
+							$subjectcheck = $db->query($query);
+							if(!$subjectcheck){
+								die('Query Error:'.$db->error);
+							}
+							if($subjectcheck->num_rows){
+								while($row = $subjectcheck->fetch_assoc()){
+									if ($row['name'] != ''){
+										
+										if($row['ID'] == $subject_ID)
+											$selected = ' selected="selected"';
+										else
+											$selected = '';
+											
+										$subjectlist = $subjectlist."\t\t\t\t\t\t\t\t\t".'<option value="'.$row['ID'].'"'.$selected.'>'.$row['name'].'</option>'."\n";
+									}
+								}
+							}
+							
 							echo "
 							<td>
 								<select name=\"subject_".((5*$i+$j)+1)."\">
 									<option value=\"\">".STR_TABLE_CHOOSE."</option>\n".$subjectlist."
 								</select>
 								<br>
-								<input name=\"room_".((5*$i+$j)+1)."\" type=\"text\" size=\"5\" value=\"\">
+								<input name=\"room_".((5*$i+$j)+1)."\" type=\"text\" size=\"5\" value=\"".$room."\">
 							</td>";
 
 						}
