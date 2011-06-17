@@ -81,4 +81,10 @@ define('STR_ALERT_REGISTER_EMAIL', "The entered email was not valid!");
 define('STR_ALERT_REGISTER_TAKEN_USERNAME', "I'm sorry, but the chosen username is already taken. You have to make a different choice!");
 define('STR_ALERT_REGISTER_SUCCESS', "Registration successfull! Thanks for giving ".LOGO_NAME." a try! You will now be logged in and ready to go!");
 define('STR_ALERT_SAVE_SUCCESSFULL', "Saved successfully!");
+
+// PREVIEW
+define('STR_ABOUT_HEADLINE', 'What is time(t)able?');
+define('STR_FEATURES_HEADLINE', 'Features');
+define('STR_ABOUT_DESC', '<code>time(t)able</code> (pronounced <code>timeable</code>) is a web-based application to manage timetables. I used to have my personal timetable on my homepage written in obfuscated table-layouted html. Originally only meant for personal use, classmates started to use it as well and soon I had a hand full of people relaying on my online timetable. This works good for a few people in the same class using the same timetable, but soon we won\'t be in one class anymore, instead having personal courses with individual timetables. So I started this project to provide a solution for me and my friends to still have the timetable online and always available.');
+define('STR_FEATURES_DESC', '<ul><li>option for making the timetable public</li><li>German and English localization</li><li>clean interface</li><li>12 lesson times</li><li>5 weekdays</li><li>20 subjects with custom colors</li><li>default-room auto-assignment</li><li>easy-to-you table editor</li><li>password encryption - your data is safe</li></ul>');
 ?>

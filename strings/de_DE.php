@@ -81,4 +81,11 @@ define('STR_ALERT_REGISTER_EMAIL', "Die eingegebene Emailadresse ist nicht g&uum
 define('STR_ALERT_REGISTER_TAKEN_USERNAME', "Tut mir leid, der gew&uuml;nschte Benutzername ist bereits vergeben. Probiere einen anderen aus!");
 define('STR_ALERT_REGISTER_SUCCESS', "Registrierung erfolgreich! Danke, dass du ".LOGO_NAME." auspobierst! Du wirst jetzt eingeloggt und kannst sofort loslegen!");
 define('STR_ALERT_SAVE_SUCCESSFULL', "Erfolgreich gespeichert!");
+
+// PREVIEW
+define('STR_ABOUT_HEADLINE', 'Was ist time(t)able?');
+define('STR_FEATURES_HEADLINE', 'Features');
+define('STR_ABOUT_DESC', '<code>time(t)able</code> (sprich <code>timeable</code>) ist eine webbasierte Anwendung um Stundenpl&auml;ne zu verwalten. Fr&uuml;her hatte ich meinen Stundenplan in verwirrtem HTML auf meiner Homepage. Urspr&uumlnglich nur f&uuml;r mich selbst gedacht, fingen auch Klassenkammeraden bald an ihn zu benutzen und schnell hatte ich eine Handvoll Leute, die sich auf meine Stundenplan verlie&szlig;en. Das funktioniert vielleicht gut f&uuml;r ein paar Leute aus der gleichen Klasse, aber bald werden wir nicht mehr in Klassen sein sondern jeder wird seinen eigenen, individuellen Stundenplan haben. Also habe ich dieses Projekt gestartet um eine M&oumlglichkeit f&uumlr mich und meine Freunde zu bereitzustellen, unseren Stundenplan immer online verf&uuml;gbar zu haben.');
+define('STR_FEATURES_DESC', '<ul><li>Option, den Stundenplan &ouml;ffentlich zu machen</li><li>Deutsche und Englische Lokalisierung</li><li>Einfaches und schlichtes Interface</li><li>12 Unterrichtsstunden</li><li>5 Wochentage</li><li>20 F&auml;cher mit eigenen Farben</li><li>Standartraum Autozuweisung</li><li>einfach zu benutzender Tabelleneditor</li><li>Passwort verschl&uuml;sselung - Deine Daten sind sicher</li></ul>');
+
 ?>
