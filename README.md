@@ -16,7 +16,7 @@ Webapp for managing timetables. Made using PHP, MySQL, HTML and JS.
 * 5 weekdays
 * 20 subjects with custom colors
 * default-room auto-assignment
-* easy-to-you table editor
+* easy-to-use table editor
 
 ### Admin features
 * complete opensource
