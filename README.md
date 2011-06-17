@@ -28,7 +28,7 @@ Webapp for managing timetables. Made using PHP, MySQL, HTML and JS.
 * only 4 database tables - no clutter - easy to remove and maintain
 
 ## Cloning and self-hosting
-Before I'm done with the main code and will be able to write an install file you have to manually setup your passwords and databases. Getting the source with git installed ist very easy:
+Before I'm done with the main code and will be able to write an install file you have to manually setup your passwords and databases. Getting the source with git installed is very easy:
 
 	$ git clone https://github.com/Ps0ke/time-t-able.git
 	$ cd time-t-able
