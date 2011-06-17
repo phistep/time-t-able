@@ -1,7 +1,23 @@
+<?php
+if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['create-pw-php'])){
+$file = fopen('../strings/pw.php', 'w') or die("Error while creating file!");
+$data =
+"<?php
+define('SQL_USER', '".$_POST['sql-user']."');
+define('SQL_PASSWORD', '".$_POST['sql-pw']."');
+define('SQL_DATABASE', '".$_POST['sql-db']."');
+define('SQL_HOST', '".$_POST['sql-host']."');
+?>";
+fwrite($file, $data);
+fclose($file);
+header('location:index.php?step=3');
+exit();
+}
+?>
 <h2>Step 2 - Create pw.php</h2>
 
 <p>
-You have to store you MySQL connection information in a password file. This wizard will create the file for you when you enter your information here:
+You have to store you MySQL connection information in a password file. This wizard will create the file for you. IMPORTANT: PHP can only create files when the folder's permissions are set to '777'. You have to set this using your FTP programm. Enter your information here:
 </p>
 <form method="post" action="step2.php" style="width:300px">
   <fieldset>
@@ -25,7 +41,7 @@ You have to store you MySQL connection information in a password file. This wiza
 		</tr>
 		<tr>
 			<td></td>
-			<td align="right"><input class="button" value="GENERATE pw.php" name="formaction" type="submit"></td>
+			<td align="right"><input class="button" value="GENERATE pw.php" name="create-pw-php" type="submit"></td>
 		</tr>
 	</table>
   </fieldset>
