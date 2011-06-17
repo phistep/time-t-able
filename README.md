@@ -4,6 +4,10 @@ Webapp for managing timetables. Made using PHP, MySQL, HTML and JS.
 ## About time(t)able
 `time(t)able` (pronounced `timeable`) is a web-based application to manage timetables. I used to have my personal timetable on my homepage written in obfuscated table-layouted html. Originally only meant for personal use, classmates started to use it as well and soon I had a hand full of people relaying on my online timetable. This works good for a few people in the same class using the same timetable, but soon we won't be in one class anymore, instead having personal courses with individual timetables. So I started this project to provide a solution for me and my friends to still have the timetable online and always available.
 
+## Try it!
+I've got my version up at [time-t-able.psoke.de](http://time-t-able.psoke.de/)!
+The project page is available under [psoke.de/other-projects/time-t-able/](http://www.psoke.de/other-projects/time-t-able/).
+
 ## Featureset
 
 ### User features
