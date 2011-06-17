@@ -1,6 +1,28 @@
+<?php
+if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['create-info-php'])){
+$file = fopen('../strings/info.php', 'w') or die("Error while creating file! Propably your permissions are not set correctly. 777 for strings/");
+$data =
+"<?php
+define('LOGO_NAME', '".$_POST['logo_name']."'); // The name of the service, appearing in the title, on top and bottom of each page
+define('AUTHOR', '".$_POST['author']."'); // The 'Author' of the webpage
+define('AUTHOR_URL', '".$_POST['author_url']."'); // Link to the author's website/twitter/what ever
+define('C_DATE', '".$_POST['c_date']."'); // Date copyrighted/last updated to indecate if its old shit or still on top of the nodge
+define('ABOUT_URL', '".$_POST['about_url']."'); // Linking to the about page, probably containing legal info or some stuff like this
+define('CONTACT_URL', '".$_POST['contact_url']."'); // Link for contacting the webmaster, probably a mailto:// address
+define('ABUSE_EMAIL', '".$_POST['abuse_email']."'); // Email address for abuse ande complains
+define('MAIN_URL', '".$_POST['main_url']."'); // Url of the root directory of the site
+define('POWERED_BY', 'Powered by <a href=\"http://www.psoke.de/other-projects/time-t-able/\">time(t)able</a>'); // Powered by message. This is the perfect place to fullfill the 'name the authorship' part of the cc license. Please leave it and the link there :)
+define('SEPERATOR', '".$_POST['seperator']."'); // Seperator between link lists
+?>";
+fwrite($file, $data);
+fclose($file);
+header('location:index.php?step=5');
+exit();
+}
+?>
 <h2>Step 4 - Create info.php</h2>
 <p>
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+We need some information to fit the site for your setup. This information is stored in the file strings/info.php and the script can creat it for you (if your permissions are set right). Just insert the information here:
 </p>
 <form method="post" action="step4.php">
   <fieldset>
@@ -58,7 +80,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 		</tr>
 		<tr>
 			<td></td>
-			<td align="right"><input class="button" value="GENERATE info.php" name="formaction" type="submit"></td>
+			<td align="right"><input class="button" value="GENERATE info.php" name="create-info-php" type="submit"></td>
 		</tr>
 	</table>
   </fieldset>
@@ -75,7 +97,7 @@ define('ABOUT_URL', ''); // Linking to the about page, probably containing legal
 define('CONTACT_URL', ''); // Link for contacting the webmaster, probably a mailto:// address
 define('ABUSE_EMAIL', ''); // Email address for abuse ande complains
 define('MAIN_URL', ''); // Url of the root directory of the site
-define('POWERED_BY', 'Powered by <a href=&quot;http://www.psoke.de/other-projects/time-t-able/&quot;>time(t)able</a>'); // Powered by message. This is the perfect place to fullfill the 'name the authorship' part of the cc license. Please leave it and the link there :)
+define('POWERED_BY', 'Powered by &lt;a href=&quot;http://www.psoke.de/other-projects/time-t-able/&quot;?&gttime(t)able&lt;/a?&gt'); // Powered by message. This is the perfect place to fullfill the 'name the authorship' part of the cc license. Please leave it and the link there :)
 define('SEPERATOR', ''); // Seperator between link lists
 ?&gt
 </pre>

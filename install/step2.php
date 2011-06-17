@@ -1,6 +1,6 @@
 <?php
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['create-pw-php'])){
-$file = fopen('../strings/pw.php', 'w') or die("Error while creating file!");
+$file = fopen('../strings/pw.php', 'w') or die("Error while creating file! Propably your permissions are not set correctly. 777 for strings/");
 $data =
 "<?php
 define('SQL_USER', '".$_POST['sql-user']."');

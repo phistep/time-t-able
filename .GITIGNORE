@@ -1,4 +1,5 @@
 *.tmproj
 strings/pw.php
+strings/info.php
 .DS_Store
 /htmlmockup
