@@ -126,6 +126,9 @@
 				if($row['public']){
 					$public = 'checked="checked"';
 				}
+				else {
+					$publiclink = 'style="display:none;"';
+				}
 		}
 		
 		?>
@@ -146,9 +149,9 @@
 					</tr>
 					<tr>
 						<td><label for="public"><?php echo STR_GENERAL_PUBLIC; ?></label></td>
-						<td><input name="public" id="public" type="checkbox" <?php echo $public; ?> /></td>
+						<td><input name="public" id="public" onClick="javascript:changeVisibleRow('publiclink');" type="checkbox" <?php echo $public; ?> /></td>
 					</tr>
-					<tr id="publiclink">
+					<tr id="publiclink" <?php echo $publiclink; ?>>
 						<td><label for="link"><a href="<?php echo MAIN_URL; ?>?view=<?php echo $_SESSION['username']; ?>"><?php echo STR_GENERAL_LINK; ?></a></label></td>
 						<td><input type="text" id="link" readonly="readonly" onFocus="javascript:selectAll('link');" value="<?php echo MAIN_URL; ?>?view=<?php echo $_SESSION['username']; ?>" /></td>
 					</tr>

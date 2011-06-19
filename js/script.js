@@ -6,6 +6,14 @@ function changeVisible(id){
 	}
 }
 
+function changeVisibleRow(id){
+	if (document.getElementById(id).style.display == 'table-row') {
+		document.getElementById(id).style.display = 'none';
+	} else {
+		document.getElementById(id).style.display = 'table-row';
+	}
+}
+
 function selectAll(id){
 	document.getElementById(id).select();
 }
