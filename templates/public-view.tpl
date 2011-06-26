@@ -127,7 +127,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['view'])){
 			?>
 		</table>
 	
-		<?php echo $username.STR_PUBLIC_SHAREING; ?>
+		<?php echo $username.STR_PUBLIC_SHARING; ?>
 		<br /><br />
 		<?php echo STR_PUBLIC_DISCLAIMER; ?>
 	</div>
