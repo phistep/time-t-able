@@ -49,39 +49,6 @@ h1{
 .desc{
 	width:350px;
 }
-.registerbutton{
-	background: 
-			-webkit-gradient(
-			    linear,
-			    left bottom,
-			    left top,
-			    color-stop(0, rgb(232,232,232)),
-			    color-stop(1, rgb(255,255,255))
-			);
-		background:
-			-moz-linear-gradient(
-			    center bottom,
-			    rgb(232,232,232) 0%,
-			    rgb(255,255,255) 100%
-			);
-
-		-webkit-border-radius: 5px;
-		-moz-border-radius: 5px;
-		border-radius: 5px;
-
-		-webkit-box-shadow: 00px 0px 5px  #adadad;
-		-moz-box-shadow: 00px 0px 5px #adadad;
-		box-shadow: 00px 0px 5px #adadad;
-
-		border: none;
-		padding: 5px;
-		margin: 5px;
-		font-family: Arial, sans-serif;
-		font-size: 26px;
-		font-style: normal;
-		width:250px;
-		text-align: center;
-}
 
 #timetable{
 	padding-bottom:25px;
