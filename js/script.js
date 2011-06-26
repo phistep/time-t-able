@@ -7,10 +7,10 @@ function changeVisible(id){
 }
 
 function changeVisibleRow(id){
-	if (document.getElementById(id).style.display == 'table-row') {
-		document.getElementById(id).style.display = 'none';
-	} else {
+	if (document.getElementById(id).style.display == 'none') {
 		document.getElementById(id).style.display = 'table-row';
+	} else {
+		document.getElementById(id).style.display = 'none';
 	}
 }
 
