@@ -158,20 +158,6 @@
 				</table>
 				<input class="button" value="<?php echo STR_SAVE_BUTTON; ?>" name="formaction" type="submit" />	
 			</form>
-			<br />
-			<input type="button" id="delete-button" value="<?php echo STR_GENERAL_DEL_SHOW; ?>" onClick="javascript:changeVisible('delete-form'); changeValue('delete-button', '<?php echo STR_GENERAL_DEL_SHOW; ?>', '<?php echo STR_GENERAL_DEL_HIDE; ?>');"/>
-			<form method="post" action="action/delete.php" id="delete-form" style="display:none;">
-				<table>
-					<tr>
-						<td><label for="password"><?php echo STR_GENERAL_DEL_CONFIRM; ?></label></td>
-						<td><input type="password" id="password" value="" name="password" /></form></td>
-					</tr>
-					<tr>
-						<td><?php echo STR_GENERAL_DEL_NOUNDO; ?></td>
-						<td><input class="button" value="<?php echo STR_GENERAL_DEL_GO; ?>" name="formaction" type="submit" /></td>
-					</tr>
-				</table>
-			</form>
 		</div>
 		<hr />
 	</div>
@@ -375,7 +361,87 @@
 				</table>
 				<input class="button" value="<?php echo STR_SAVE_BUTTON; ?>" name="formaction" type="submit" />
 			</form>
+		</div>
+		<hr />
+	</div>
+	<div class="optionpane">
+		<a href="javascript:changeVisible('accountpane');"><h1><?php echo STR_ACCOUNT_SETTINGS; ?></h1></a>
+		<div id="accountpane" style="display:none;">
 			<hr />
+			<input type="button" id="changemail-button" value="<?php echo STR_ACCOUNT_MAIL_BUTTON; ?>" onClick="javascript:changeVisible('changemail-form'); changeValue('changemail-button', '<?php echo STR_ACCOUNT_MAIL_BUTTON; ?>', '<?php echo STR_CANCEL; ?>');"/>
+			<form method="post" action="action/delete.php" id="changemail-form" style="display:none;">
+				<table>
+					<tr>
+						<td><label for="password"><?php echo STR_ACCOUNT_MAIL_CONFIRM_PASSWORD; ?></label></td>
+						<td><input type="password" id="password" value="" name="password" /></td>
+					</tr>
+					<tr>
+						<td><label for="email"><?php echo STR_ACCOUNT_MAIL_NEW; ?></label></td>
+						<td><input type="text" id="email" value="" name="email" /></td>
+					</tr>
+					<tr>
+						<td><input class="button" value="<?php echo STR_GO; ?>" name="formaction" type="submit" /></td>
+					</tr>
+				</table>
+			</form>
+			
+			<br /><br />
+			
+			<input type="button" id="changename-button" value="<?php echo STR_ACCOUNT_USERNAME_BUTTON; ?>" onClick="javascript:changeVisible('changename-form'); changeValue('changename-button', '<?php echo STR_ACCOUNT_USERNAME_BUTTON; ?>', '<?php echo STR_CANCEL; ?>');"/>
+			<form method="post" action="action/delete.php" id="changename-form" style="display:none;">
+				<table>
+					<tr>
+						<td><label for="email"><?php echo STR_ACCOUNT_USERNAME_NEW; ?></label></td>
+						<td><input type="text" id="username" value="" name="username" /></td>
+					</tr>
+					<tr>
+						<td><input class="button" value="<?php echo STR_GO; ?>" name="formaction" type="submit" /></td>
+					</tr>
+				</table>
+			</form>
+			
+			<br /><br />
+			
+			<input type="button" id="changepassword-button" value="<?php echo STR_ACCOUNT_PASSWORD_BUTTON; ?>" onClick="javascript:changeVisible('changepassword-form'); changeValue('changepassword-button', '<?php echo STR_ACCOUNT_PASSWORD_BUTTON; ?>', '<?php echo STR_CANCEL; ?>');"/>
+			<form method="post" action="action/delete.php" id="changepassword-form" style="display:none;">
+				<table>
+					<tr>
+						<td><label for="oldpassword"><?php echo STR_ACCOUNT_PASSWORD_OLD; ?></label></td>
+						<td><input type="password" id="oldpassword" value="" name="oldpassword" /></td>
+					</tr>
+					<tr>
+						<td><label for="newpassword"><?php echo STR_ACCOUNT_PASSWORD_NEW; ?></label></td>
+						<td><input type="password" id="newpassword" value="" name="newpassword" /></td>
+					</tr>
+					<tr>
+						<td><label for="newpassword"><?php echo STR_ACCOUNT_PASSWORD_NEW_CONFIRM; ?></label></td>
+						<td><input type="password" id="newpasswordconfirm" value="" name="newpasswordconfirm" /></td>
+					</tr>
+					<tr>
+						<td><input class="button" value="<?php echo STR_GO; ?>" name="formaction" type="submit" /></td>
+					</tr>
+				</table>
+			</form>
+			
+			<br /><br />
+			
+			<input type="button" id="delete-button" value="<?php echo STR_ACCOUNT_DELETE_BUTTON; ?>" onClick="javascript:changeVisible('delete-form'); changeValue('delete-button', '<?php echo STR_ACCOUNT_DELETE_BUTTON; ?>', '<?php echo STR_CANCEL; ?>');"/>
+			<form method="post" action="action/delete.php" id="delete-form" style="display:none;">
+				<table>
+					<tr>
+						<td><label for="password"><?php echo STR_ACCOUNT_DELETE_CONFIRM_PASSWORD; ?></label></td>
+						<td><input type="password" id="password" value="" name="password" /></td>
+					</tr>
+					<tr>
+						<td><?php echo STR_ACCOUNT_DELETE_NO_UNDO; ?></td>
+						<td><input class="button" value="<?php echo STR_GO; ?>" name="formaction" type="submit" /></td>
+					</tr>
+				</table>
+			</form>
+			
+		<hr />
 		</div>
 	</div>
+
+
 </div>
