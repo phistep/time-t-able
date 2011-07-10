@@ -4,7 +4,7 @@ include('../include.php');
 
 if($_SESSION['login'] != '1'){
 	// not logged in, can't update any tables for noone
-	alert(STR_ALERT_ALREADYLOGGEDIN, "error", MAIN_URL, 3);
+	alert(STR_ALERT_NOTLOGGEDIN, "error", MAIN_URL, 3);
 }
 else{
 	// Only processing
