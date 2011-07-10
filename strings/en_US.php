@@ -38,6 +38,8 @@ define('STR_PUBLIC_NO', ' is not a user of '.LOGO_NAME.' or has decided not to s
 
 // MAIN
 define('STR_SAVE_BUTTON', 'Save');
+define('STR_GO_BUTTON', 'Go');
+define('STR_CANCEL_BUTTON', 'Cancel');
 define('STR_YOUR_TIMETABLE', 'Dein Stundenplan');
 define('STR_DAY_MON', 'Monday');
 define('STR_DAY_TUE', 'Tuesday');
@@ -49,11 +51,6 @@ define('STR_GENERAL_PERIOD', 'Period/Semester:');
 define('STR_GENERAL_CLASS', 'Class:');
 define('STR_GENERAL_PUBLIC', 'Public timetable:');
 define('STR_GENERAL_LINK', 'Your public link:');
-define('STR_GENERAL_DEL_SHOW', 'Delete account');
-define('STR_GENERAL_DEL_HIDE', 'Cancel');
-define('STR_GENERAL_DEL_CONFIRM', 'Confirm password:');
-define('STR_GENERAL_DEL_NOUNDO', 'You can\'t undo this action!');
-define('STR_GENERAL_DEL_GO', 'Good Bye!');
 define('STR_TIMES', 'Times');
 define('STR_SUBJECTS_SUBJECTS', 'Subjects');
 define('STR_SUBJECTS_NAME', 'Name:');
@@ -64,6 +61,19 @@ define('STR_TABLE_TIMETABLE', 'Timetable');
 define('STR_TABLE_HELP', 'Choose the actual order of your timetable. If the subject takes place in its default room, leave the textbox below it empty and the default room will be assigned. Otherwise enter the room for this specific lesson.');
 define('STR_TABLE_LESSON', 'Lesson');
 define('STR_TABLE_CHOOSE', 'Choose...');
+define('STR_ACCOUNT_SETTINGS', 'Account Settings');
+define('STR_ACCOUNT_MAIL_BUTTON', 'Change Email');
+define('STR_ACCOUNT_MAIL_CONFIRM_PASSWORD', 'Confirm Password:');
+define('STR_ACCOUNT_MAIL_NEW', 'New Email Address:');
+define('STR_ACCOUNT_USERNAME_BUTTON', 'Change Username');
+define('STR_ACCOUNT_USERNAME_NEW', 'New Username:');
+define('STR_ACCOUNT_PASSWORD_BUTTON', 'Change Password');
+define('STR_ACCOUNT_PASSWORD_OLD', 'Old Password:');
+define('STR_ACCOUNT_PASSWORD_NEW', 'New Password:');
+define('STR_ACCOUNT_PASSWORD_NEW_CONFIRM', 'Confirm New Password:');
+define('STR_ACCOUNT_DELETE_BUTTON', 'Delete Account');
+define('STR_ACCOUNT_DELETE_CONFIRM_PASSWORD', "Confirm Password:");
+define('STR_ACCOUNT_DELETE_NO_UNDO', 'You cannot undo this action!');
 
 // ALERTS
 define('STR_ALERT_LOGOUT_SUCCESS', "Signed out successfully!");

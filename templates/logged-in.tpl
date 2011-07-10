@@ -368,7 +368,7 @@
 		<a href="javascript:changeVisible('accountpane');"><h1><?php echo STR_ACCOUNT_SETTINGS; ?></h1></a>
 		<div id="accountpane" style="display:none;">
 			<hr />
-			<input type="button" id="changemail-button" value="<?php echo STR_ACCOUNT_MAIL_BUTTON; ?>" onClick="javascript:changeVisible('changemail-form'); changeValue('changemail-button', '<?php echo STR_ACCOUNT_MAIL_BUTTON; ?>', '<?php echo STR_CANCEL; ?>');"/>
+			<input type="button" id="changemail-button" value="<?php echo STR_ACCOUNT_MAIL_BUTTON; ?>" onClick="javascript:changeVisible('changemail-form'); changeValue('changemail-button', '<?php echo STR_ACCOUNT_MAIL_BUTTON; ?>', '<?php echo STR_CANCEL_BUTTON; ?>');"/>
 			<form method="post" action="action/delete.php" id="changemail-form" style="display:none;">
 				<table>
 					<tr>
@@ -380,14 +380,14 @@
 						<td><input type="text" id="email" value="" name="email" /></td>
 					</tr>
 					<tr>
-						<td><input class="button" value="<?php echo STR_GO; ?>" name="formaction" type="submit" /></td>
+						<td><input class="button" value="<?php echo STR_GO_BUTTON; ?>" name="formaction" type="submit" /></td>
 					</tr>
 				</table>
 			</form>
 			
 			<br /><br />
 			
-			<input type="button" id="changename-button" value="<?php echo STR_ACCOUNT_USERNAME_BUTTON; ?>" onClick="javascript:changeVisible('changename-form'); changeValue('changename-button', '<?php echo STR_ACCOUNT_USERNAME_BUTTON; ?>', '<?php echo STR_CANCEL; ?>');"/>
+			<input type="button" id="changename-button" value="<?php echo STR_ACCOUNT_USERNAME_BUTTON; ?>" onClick="javascript:changeVisible('changename-form'); changeValue('changename-button', '<?php echo STR_ACCOUNT_USERNAME_BUTTON; ?>', '<?php echo STR_CANCEL_BUTTON; ?>');"/>
 			<form method="post" action="action/delete.php" id="changename-form" style="display:none;">
 				<table>
 					<tr>
@@ -395,14 +395,14 @@
 						<td><input type="text" id="username" value="" name="username" /></td>
 					</tr>
 					<tr>
-						<td><input class="button" value="<?php echo STR_GO; ?>" name="formaction" type="submit" /></td>
+						<td><input class="button" value="<?php echo STR_GO_BUTTON; ?>" name="formaction" type="submit" /></td>
 					</tr>
 				</table>
 			</form>
 			
 			<br /><br />
 			
-			<input type="button" id="changepassword-button" value="<?php echo STR_ACCOUNT_PASSWORD_BUTTON; ?>" onClick="javascript:changeVisible('changepassword-form'); changeValue('changepassword-button', '<?php echo STR_ACCOUNT_PASSWORD_BUTTON; ?>', '<?php echo STR_CANCEL; ?>');"/>
+			<input type="button" id="changepassword-button" value="<?php echo STR_ACCOUNT_PASSWORD_BUTTON; ?>" onClick="javascript:changeVisible('changepassword-form'); changeValue('changepassword-button', '<?php echo STR_ACCOUNT_PASSWORD_BUTTON; ?>', '<?php echo STR_CANCEL_BUTTON; ?>');"/>
 			<form method="post" action="action/delete.php" id="changepassword-form" style="display:none;">
 				<table>
 					<tr>
@@ -418,14 +418,14 @@
 						<td><input type="password" id="newpasswordconfirm" value="" name="newpasswordconfirm" /></td>
 					</tr>
 					<tr>
-						<td><input class="button" value="<?php echo STR_GO; ?>" name="formaction" type="submit" /></td>
+						<td><input class="button" value="<?php echo STR_GO_BUTTON; ?>" name="formaction" type="submit" /></td>
 					</tr>
 				</table>
 			</form>
 			
 			<br /><br />
 			
-			<input type="button" id="delete-button" value="<?php echo STR_ACCOUNT_DELETE_BUTTON; ?>" onClick="javascript:changeVisible('delete-form'); changeValue('delete-button', '<?php echo STR_ACCOUNT_DELETE_BUTTON; ?>', '<?php echo STR_CANCEL; ?>');"/>
+			<input type="button" id="delete-button" value="<?php echo STR_ACCOUNT_DELETE_BUTTON; ?>" onClick="javascript:changeVisible('delete-form'); changeValue('delete-button', '<?php echo STR_ACCOUNT_DELETE_BUTTON; ?>', '<?php echo STR_CANCEL_BUTTON; ?>');"/>
 			<form method="post" action="action/delete.php" id="delete-form" style="display:none;">
 				<table>
 					<tr>
@@ -434,7 +434,7 @@
 					</tr>
 					<tr>
 						<td><?php echo STR_ACCOUNT_DELETE_NO_UNDO; ?></td>
-						<td><input class="button" value="<?php echo STR_GO; ?>" name="formaction" type="submit" /></td>
+						<td><input class="button" value="<?php echo STR_GO_BUTTON; ?>" name="formaction" type="submit" /></td>
 					</tr>
 				</table>
 			</form>
@@ -442,6 +442,4 @@
 		<hr />
 		</div>
 	</div>
-
-
 </div>
