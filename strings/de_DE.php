@@ -38,6 +38,7 @@ define('STR_PUBLIC_NO', ' benutzt '.LOGO_NAME.' nicht oder ver&ouml;ffentlicht s
 
 // MAIN
 define('STR_SAVE_BUTTON', 'Speichern');
+define('STR_CANCEL_BUTTON', 'Abbrechen');
 define('STR_YOUR_TIMETABLE', 'Dein Stundenplan');
 define('STR_DAY_MON', 'Montag');
 define('STR_DAY_TUE', 'Dienstag');
@@ -49,11 +50,6 @@ define('STR_GENERAL_PERIOD', 'Jahr:');
 define('STR_GENERAL_CLASS', 'Klasse/Stufe:');
 define('STR_GENERAL_PUBLIC', '&Ouml;ffentlicher Stundenplan:');
 define('STR_GENERAL_LINK', 'Dein &ouml;ffentlicher Link:');
-define('STR_GENERAL_DEL_SHOW', 'Account l&ouml;schen');
-define('STR_GENERAL_DEL_HIDE', 'Abbrechen');
-define('STR_GENERAL_DEL_CONFIRM', 'Passwort best&auml;tigen:');
-define('STR_GENERAL_DEL_NOUNDO', 'Dies kann nicht r&uuml;ckg&auml;ngig gemacht werden!');
-define('STR_GENERAL_DEL_GO', 'Auf Wiedersehen!');
 define('STR_TIMES', 'Zeiten');
 define('STR_SUBJECTS_SUBJECTS', 'F&auml;cher');
 define('STR_SUBJECTS_NAME', 'Name:');
@@ -64,6 +60,20 @@ define('STR_TABLE_TIMETABLE', 'Stundenplan');
 define('STR_TABLE_HELP', 'Ver&auml;ndere hier deine genaue Stundenplananordnung. Wenn das Fach in seinem Standardraum statt findet, lass die Textbox leer und der Standardraum wird hinzugef&uuml;gt. Ansonsten f&uuml;ge den gesonderten Raum f&uuml;r diese spezielle Stunde unten ein.');
 define('STR_TABLE_LESSON', 'Stunde');
 define('STR_TABLE_CHOOSE', 'W&auml;hlen...');
+define('STR_ACCOUNT_SETTINGS', 'Kontoeinstellungen');
+define('STR_ACCOUNT_MAIL_BUTTON', 'Email &Auml;ndern');
+define('STR_ACCOUNT_MAIL_CONFIRM_PASSWORD', 'Passwort best&aumltigen:');
+define('STR_ACCOUNT_MAIL_NEW', 'Neue Emailadresse:');
+define('STR_ACCOUNT_USERNAME_BUTTON', 'Benutzername &Auml;ndern');
+define('STR_ACCOUNT_USERNAME_NEW', 'Neuer Benutzername:');
+define('STR_ACCOUNT_PASSWORD_BUTTON', 'Passwort &Auml;ndern');
+define('STR_ACCOUNT_PASSWORD_OLD', 'Altes Passwort:');
+define('STR_ACCOUNT_PASSWORD_NEW', 'Neues Passwort:');
+define('STR_ACCOUNT_PASSWORD_NEW_CONFIRM', 'Neues Passwort best&auml;tigen:');
+define('STR_ACCOUNT_DELETE_BUTTON', 'Konto L&ouml;schen');
+define('STR_ACCOUNT_DELETE_CONFIRM_PASSWORD', "Passwort best&auml;tigen:");
+define('STR_ACCOUNT_DELETE_NO_UNDO', 'Dies kann nicht r&uuml;ckg&auml;ngig gemacht werden!');
+define('STR_ACCOUNT_DELETE_GOODBYE_BUTTON', 'Auf Wiedersehen!');
 
 // ALERTS
 define('STR_ALERT_LOGOUT_SUCCESS', "Erfolgreich ausgeloggt!");

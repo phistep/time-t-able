@@ -38,7 +38,6 @@ define('STR_PUBLIC_NO', ' is not a user of '.LOGO_NAME.' or has decided not to s
 
 // MAIN
 define('STR_SAVE_BUTTON', 'Save');
-define('STR_GO_BUTTON', 'Go');
 define('STR_CANCEL_BUTTON', 'Cancel');
 define('STR_YOUR_TIMETABLE', 'Dein Stundenplan');
 define('STR_DAY_MON', 'Monday');
@@ -74,6 +73,7 @@ define('STR_ACCOUNT_PASSWORD_NEW_CONFIRM', 'Confirm New Password:');
 define('STR_ACCOUNT_DELETE_BUTTON', 'Delete Account');
 define('STR_ACCOUNT_DELETE_CONFIRM_PASSWORD', "Confirm Password:");
 define('STR_ACCOUNT_DELETE_NO_UNDO', 'You cannot undo this action!');
+define('STR_ACCOUNT_DELETE_GOODBYE_BUTTON', 'Good Bye!');
 
 // ALERTS
 define('STR_ALERT_LOGOUT_SUCCESS', "Signed out successfully!");

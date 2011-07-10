@@ -380,7 +380,7 @@
 						<td><input type="text" id="email" value="" name="email" /></td>
 					</tr>
 					<tr>
-						<td><input class="button" value="<?php echo STR_GO_BUTTON; ?>" name="formaction" type="submit" /></td>
+						<td><input class="button" value="<?php echo STR_SAVE_BUTTON; ?>" name="formaction" type="submit" /></td>
 					</tr>
 				</table>
 			</form>
@@ -395,7 +395,7 @@
 						<td><input type="text" id="username" value="" name="username" /></td>
 					</tr>
 					<tr>
-						<td><input class="button" value="<?php echo STR_GO_BUTTON; ?>" name="formaction" type="submit" /></td>
+						<td><input class="button" value="<?php echo STR_SAVE_BUTTON; ?>" name="formaction" type="submit" /></td>
 					</tr>
 				</table>
 			</form>
@@ -418,7 +418,7 @@
 						<td><input type="password" id="newpasswordconfirm" value="" name="newpasswordconfirm" /></td>
 					</tr>
 					<tr>
-						<td><input class="button" value="<?php echo STR_GO_BUTTON; ?>" name="formaction" type="submit" /></td>
+						<td><input class="button" value="<?php echo STR_SAVE_BUTTON; ?>" name="formaction" type="submit" /></td>
 					</tr>
 				</table>
 			</form>
@@ -434,7 +434,7 @@
 					</tr>
 					<tr>
 						<td><?php echo STR_ACCOUNT_DELETE_NO_UNDO; ?></td>
-						<td><input class="button" value="<?php echo STR_GO_BUTTON; ?>" name="formaction" type="submit" /></td>
+						<td><input class="button" value="<?php echo STR_ACCOUNT_DELETE_GOODBYE_BUTTON; ?>" name="formaction" type="submit" /></td>
 					</tr>
 				</table>
 			</form>
