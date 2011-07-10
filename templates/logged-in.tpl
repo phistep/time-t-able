@@ -369,7 +369,8 @@
 		<div id="accountpane" style="display:none;">
 			<hr />
 			<input type="button" id="changemail-button" value="<?php echo STR_ACCOUNT_MAIL_BUTTON; ?>" onClick="javascript:changeVisible('changemail-form'); changeValue('changemail-button', '<?php echo STR_ACCOUNT_MAIL_BUTTON; ?>', '<?php echo STR_CANCEL_BUTTON; ?>');"/>
-			<form method="post" action="action/delete.php" id="changemail-form" style="display:none;">
+			<form method="post" action="action/account.php" id="changemail-form" style="display:none;">
+				<input type="hidden" name="action" value="mail" />
 				<table>
 					<tr>
 						<td><label for="password"><?php echo STR_ACCOUNT_MAIL_CONFIRM_PASSWORD; ?></label></td>
@@ -388,7 +389,8 @@
 			<br /><br />
 			
 			<input type="button" id="changename-button" value="<?php echo STR_ACCOUNT_USERNAME_BUTTON; ?>" onClick="javascript:changeVisible('changename-form'); changeValue('changename-button', '<?php echo STR_ACCOUNT_USERNAME_BUTTON; ?>', '<?php echo STR_CANCEL_BUTTON; ?>');"/>
-			<form method="post" action="action/delete.php" id="changename-form" style="display:none;">
+			<form method="post" action="action/account.php" id="changename-form" style="display:none;">
+				<input type="hidden" name="action" value="username" />
 				<table>
 					<tr>
 						<td><label for="email"><?php echo STR_ACCOUNT_USERNAME_NEW; ?></label></td>
@@ -403,7 +405,8 @@
 			<br /><br />
 			
 			<input type="button" id="changepassword-button" value="<?php echo STR_ACCOUNT_PASSWORD_BUTTON; ?>" onClick="javascript:changeVisible('changepassword-form'); changeValue('changepassword-button', '<?php echo STR_ACCOUNT_PASSWORD_BUTTON; ?>', '<?php echo STR_CANCEL_BUTTON; ?>');"/>
-			<form method="post" action="action/delete.php" id="changepassword-form" style="display:none;">
+			<form method="post" action="action/account.php" id="changepassword-form" style="display:none;">
+				<input type="hidden" name="action" value="password" />
 				<table>
 					<tr>
 						<td><label for="oldpassword"><?php echo STR_ACCOUNT_PASSWORD_OLD; ?></label></td>
@@ -426,7 +429,8 @@
 			<br /><br />
 			
 			<input type="button" id="delete-button" value="<?php echo STR_ACCOUNT_DELETE_BUTTON; ?>" onClick="javascript:changeVisible('delete-form'); changeValue('delete-button', '<?php echo STR_ACCOUNT_DELETE_BUTTON; ?>', '<?php echo STR_CANCEL_BUTTON; ?>');"/>
-			<form method="post" action="action/delete.php" id="delete-form" style="display:none;">
+			<form method="post" action="action/account.php" id="delete-form" style="display:none;">
+				<input type="hidden" name="action" value="delete" />
 				<table>
 					<tr>
 						<td><label for="password"><?php echo STR_ACCOUNT_DELETE_CONFIRM_PASSWORD; ?></label></td>
