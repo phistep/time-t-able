@@ -91,6 +91,7 @@ define('STR_ALERT_REGISTER_EMAIL', "The entered email was not valid!");
 define('STR_ALERT_REGISTER_TAKEN_USERNAME', "I'm sorry, but the chosen username is already taken. You have to make a different choice!");
 define('STR_ALERT_REGISTER_SUCCESS', "Registration successfull! Thanks for giving ".LOGO_NAME." a try! You will now be logged in and ready to go!");
 define('STR_ALERT_SAVE_SUCCESSFULL', "Saved successfully!");
+define('STR_ALERT_CHANGED_PASSWORD', "Password changed successfully!");
 
 // PREVIEW
 define('STR_ABOUT_HEADLINE', 'What is time(t)able?');

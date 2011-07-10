@@ -20,7 +20,50 @@ else{
 			break;
 			
 			case 'password':
-				echo "changing password not supported yet";
+				if(!isset($_POST['oldpassword'], $_POST['newpassword'], $_POST['newpasswordconfirm'])){
+					alert(STR_ALERT_INVALIDFORM, "error", MAIN_URL, 3);
+				}
+				// check for right password
+				$query = "	SELECT
+								pw_hash
+							FROM
+								`time-t-able_users`
+							WHERE
+								ID = ".$_SESSION['ID'];
+				$passwordcheck = $db->query($query);
+				if(!$passwordcheck){
+					die('Query Error:'.$db->error);
+				}
+				if($passwordcheck->num_rows){
+					$row = $passwordcheck->fetch_assoc();
+					if ($row['pw_hash'] == sha1($_POST['oldpassword'])){
+						// actual changing
+						if($_POST['newpassword'] != $_POST['newpasswordconfirm']){
+							// handle inconsistent passwords
+							alert(STR_ALERT_REGISTER_PASSWORDS, "error", MAIN_URL.'action/register.php', 5);
+						}
+
+						$query = "	UPDATE
+										`time-t-able_users`
+									SET
+										pw_hash = \"".sha1($_POST['newpassword'])."\"
+									WHERE
+										ID = \"".$_SESSION['ID']."\"";
+						// perform query
+						$check = $db->query($query);
+
+						// check 
+						if (!$check){
+							die('Query Error: '.$db->error);
+						}
+
+
+						alert(STR_ALERT_CHANGED_PASSWORD, "success", MAIN_URL, 5);
+					}
+					else{
+						alert(STR_ALERT_WRONGPW, "error", MAIN_URL, 3);
+					}
+				}
 			break;
 			
 			case 'delete':
