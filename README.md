@@ -45,6 +45,31 @@ I recommend git as it is in my opinion the best version control system, and it i
 ### Installing on your webserver
 Now (if not done already) upload the `time-t-able/` folder to your webspace. Now navigate your browser to `[...]/time-t-able/install/`. A setup wizard will come up and guide you through the installation process.
 
+### Updating
+If you want to update you version of time(t)able, the ease depends on the modifications you are running. Either way you should always check the `CHANGES` file with the release and update note and list of changed files.
+
+#### Unmodificated
+If you are running an unmodificated version, updating is easy using git. First backup your `strings/info.php` and `strings/pw.php`. Then simply run:
+
+	$ git fetch
+	$ git checkout vX.Y
+	
+where `X.Y` represents the version number. The last command is optional, but I recommend using it in case I pushed an unstable update. Now re-import your `strings/info.php` and `strings/pw.php` in case they got lost, but read the `CHANGES` update notes carefully in case you have to modify them. At last upload the delta to your webserver and you are done.
+
+#### Self-modificated
+If you modificated your version to fit your needs, things get a bit more complicated. In case you get hardcore conflicts always keep a offside backup of your whole source tree. **Always** check the `CHANGES` file for update notes and watch out for conflicts with your modifications. If you feel safe, you can try a simple update:
+
+	$ git branch mods
+	$ git fetch
+	$ git merge mods
+	$ git branch -d mods
+	
+If this doesn't work, use your backup and make all the changes manually. Yes, this might be a "shitload" of work. Use the list of changed files in `CHANGES` for a better overview. You can use `git diff` to see differences between two files/branches/tags and
+
+	$ git diff --name-status vX.Y HEAD
+	
+reveals all changed files from version `X.Y` to the current state of your repository.
+
 ## License
 My code is published under [cc-by-nc-sa](http://creativecommons.org/licenses/by-nc-sa/3.0/) (c) 2011 by Philipp Stephan, [ps0ke.de](http://ps0ke.de)
 
