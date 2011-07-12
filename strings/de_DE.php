@@ -32,6 +32,13 @@ define('STR_REGISTER_GO_BUTTON', 'Lass mich loslegen!');
 define('STR_REGISTER_DATA_LEGEND', 'Deine Daten:');
 define('STR_REGISTER_DATA_INFO', 'Ich nehme deine Privatsph&auml;re sehr ernst. Ich werde deine Email nur f&uuml;r Support usw. benutzen und sie niemals an Dritte weitergeben. Ich hasse Spam auch. Dein Password wird niemals in Klartext gespeichert werden.');
 
+// FORGOT PASSWORD
+define('STR_FORGOT_DATA_LEGEND', 'Passwort vergessen?');
+define('STR_FORGOT_DATA_INFO', 'Wenn du dein Passwort vergessen hast, kann es einfach zur&uuml;ckgesetzt werden (falls du dich mit deiner echten Emailadresse registriert hast). Das Passwort wird per Zufall generert und an deine Emailadresse geschickt. Du kannst es dann benutzen um dich einzuloggen und das Passwort in eines zu &auml;ndern, dass du dir besser merken kannst.<br />Falls du die Email nicht erhalten hast, &uuml;berpr&uumlfe deinen Spamordner oder versuche es erneut abzuschicken.');
+define('STR_FORGOT_LEGEND', 'Neues Passwort zuschicken');
+define('STR_FORGOT_EMAIL', 'Emailadresse:');
+define('STR_FORGOT_GO_BUTTON', 'Abschicken!');
+
 // PUBLIC
 define('STR_PUBLIC_SHARING', ' zeigt seinen Stundenplan online. Wenn du das auch willst, kannst du dich <a href="'.MAIN_URL.'action/register.php">hier</a> registrieren!');
 define('STR_PUBLIC_DISCLAIMER', 'Wenn Sie Missbrauch feststellen oder ihre Privatsph&auml;re verletzt sehen, melden Sie das an <a href="mailto:'.ABUSE_EMAIL.'">'.ABUSE_EMAIL.'</a> und erw&auml;hnen Sie "'.LOGO_NAME.' - Abuse - <BENUTZERNAME>" im Betreff. Ich &uuml;bernehme keine Verantwortung f&uuml;r jedwegen Missbrauch dieses Dienstes. Dies hier sind benutzergenerierte Daten, f&uuml;r die ich icht verantwortlich bin.');
