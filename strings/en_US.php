@@ -39,7 +39,7 @@ define('STR_PUBLIC_NO', ' is not a user of '.LOGO_NAME.' or has decided not to s
 // MAIN
 define('STR_SAVE_BUTTON', 'Save');
 define('STR_CANCEL_BUTTON', 'Cancel');
-define('STR_YOUR_TIMETABLE', 'Dein Stundenplan');
+define('STR_YOUR_TIMETABLE', 'Your Timetable');
 define('STR_DAY_MON', 'Monday');
 define('STR_DAY_TUE', 'Tuesday');
 define('STR_DAY_WED', 'Wednesday');
