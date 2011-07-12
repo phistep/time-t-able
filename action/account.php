@@ -16,7 +16,45 @@ else{
 			break;
 			
 			case 'username':
-				echo "changing username not supported yet";
+				if(!preg_match("/^[A-Za-z0-9]{3,30}$/", $_POST['username'])){
+					// handle invalid username
+					alert(STR_ALERT_REGISTER_INVALID_USERNAME, "error", MAIN_URL, 5);
+				}
+				$query = "	SELECT
+								username
+							FROM
+								`time-t-able_users`
+							WHERE
+								1";
+				$usernamecheck = $db->query($query);
+				if(!$usernamecheck){
+					die('Query Error:'.$db->error);
+				}
+				if($usernamecheck->num_rows){
+					while($row = $usernamecheck->fetch_assoc()){
+						if ($row['username'] == $_POST['username']){
+							// handle taken username
+							alert(STR_ALERT_REGISTER_TAKEN_USERNAME, "error", MAIN_URL, 5);
+						}
+					}
+				}
+				$query = "	UPDATE
+								`time-t-able_users`
+							SET
+								username = \"".$_POST['username']."\"
+							WHERE
+								ID = \"".$_SESSION['ID']."\"";
+				// perform query
+				$check = $db->query($query);
+
+				// check 
+				if (!$check){
+					die('Query Error: '.$db->error);
+				}
+				
+				$_SESSION['username'] = $_POST['username'];
+				
+				alert(STR_ALERT_CHANGED_USERNAME, "success", MAIN_URL, 5);
 			break;
 			
 			case 'password':
@@ -40,7 +78,7 @@ else{
 						// actual changing
 						if($_POST['newpassword'] != $_POST['newpasswordconfirm']){
 							// handle inconsistent passwords
-							alert(STR_ALERT_REGISTER_PASSWORDS, "error", MAIN_URL.'action/register.php', 5);
+							alert(STR_ALERT_REGISTER_PASSWORDS, "error", MAIN_URL, 5);
 						}
 
 						$query = "	UPDATE

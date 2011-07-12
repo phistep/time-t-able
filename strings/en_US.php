@@ -92,6 +92,7 @@ define('STR_ALERT_REGISTER_TAKEN_USERNAME', "I'm sorry, but the chosen username 
 define('STR_ALERT_REGISTER_SUCCESS', "Registration successfull! Thanks for giving ".LOGO_NAME." a try! You will now be logged in and ready to go!");
 define('STR_ALERT_SAVE_SUCCESSFULL', "Saved successfully!");
 define('STR_ALERT_CHANGED_PASSWORD', "Password changed successfully!");
+define('STR_ALERT_CHANGED_USERNAME', "Username changed successfully!");
 
 // PREVIEW
 define('STR_ABOUT_HEADLINE', 'What is time(t)able?');
