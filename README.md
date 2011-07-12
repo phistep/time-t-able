@@ -46,7 +46,7 @@ I recommend git as it is in my opinion the best version control system, and it i
 Now (if not done already) upload the `time-t-able/` folder to your webspace. Now navigate your browser to `[...]/time-t-able/install/`. A setup wizard will come up and guide you through the installation process.
 
 ### Updating
-If you want to update you version of time(t)able, the ease depends on the modifications you are running. Either way you should always check the `CHANGES.md` file with the release and update note and list of changed files.
+If you want to update you version of time(t)able, the ease depends on the modifications you are running. Either way you should always check the `CHANGES.md` file with the release and update note and list of changed files. Don't forget to delete the `install/` folder and to set the permissions again.
 
 #### Unmodificated
 If you are running an unmodificated version, updating is easy using git. First backup your `strings/info.php` and `strings/pw.php`. Then simply run:
