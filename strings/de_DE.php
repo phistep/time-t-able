@@ -39,6 +39,8 @@ define('STR_FORGOT_DATA_INFO', 'Wenn du dein Passwort vergessen hast, kann es ei
 define('STR_FORGOT_LEGEND', 'Neues Passwort zuschicken');
 define('STR_FORGOT_EMAIL', 'Emailadresse:');
 define('STR_FORGOT_GO_BUTTON', 'Abschicken!');
+define('STR_FORGOT_MAIL_SUBJECT', LOGO_NAME.' Passwort Zurueckgesetzt');
+define('STR_FORGOT_MAIL_CONTENT', 'Dein Passwort ist:   ');
 
 // PUBLIC
 define('STR_PUBLIC_SHARING', ' zeigt seinen Stundenplan online. Wenn du das auch willst, kannst du dich <a href="'.MAIN_URL.'action/register.php">hier</a> registrieren!');
@@ -104,6 +106,8 @@ define('STR_ALERT_SAVE_SUCCESSFULL', "Erfolgreich gespeichert!");
 define('STR_ALERT_CHANGED_PASSWORD', "Passwort erfolgreich ge&auml;ndert!");
 define('STR_ALERT_CHANGED_USERNAME', "Benutzername erfolgreich ge&auml;ndert!");
 define('STR_ALERT_CHANGED_EMAIL', "Emailadresse erfolgreich ge&auml;ndert!");
+define('STR_ALERT_FORGOT_SENT_AND_RESET', "Dein Passwort wurde zur&uum;lckgesetzt und die Email verschickt! &Uuml;berpr&uuml;fe dein Postfach.");
+define('STR_ALERT_FORGOT_EMAIL_NOT_IN_DB', "Die eingegebene Emailadresse ist nicht registriert!");
 
 // PREVIEW
 define('STR_ABOUT_HEADLINE', 'Was ist time(t)able?');

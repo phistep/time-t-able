@@ -39,6 +39,8 @@ define('STR_FORGOT_DATA_INFO', 'When you forgot your password, it can sinply be 
 define('STR_FORGOT_LEGEND', 'Send new password');
 define('STR_FORGOT_EMAIL', 'Email address:');
 define('STR_FORGOT_GO_BUTTON', 'Send!');
+define('STR_FORGOT_MAIL_SUBJECT', LOGO_NAME.' Password Reset');
+define('STR_FORGOT_MAIL_CONTENT', 'Your password has been reset to:   ');
 
 // PUBLIC
 define('STR_PUBLIC_SHARING', ' is sharing his timetable online. If you also want to do that, you can register <a href="'.MAIN_URL.'action/register.php">here</a>!');
@@ -104,6 +106,8 @@ define('STR_ALERT_SAVE_SUCCESSFULL', "Saved successfully!");
 define('STR_ALERT_CHANGED_PASSWORD', "Password changed successfully!");
 define('STR_ALERT_CHANGED_USERNAME', "Username changed successfully!");
 define('STR_ALERT_CHANGED_EMAIL', "Email address changed successfully!");
+define('STR_ALERT_FORGOT_SENT_AND_RESET', "Your password has been reset and the email sent! Check your inbox.");
+define('STR_ALERT_FORGOT_EMAIL_NOT_IN_DB', "The entered email address is not registered!");
 
 // PREVIEW
 define('STR_ABOUT_HEADLINE', 'What is time(t)able?');

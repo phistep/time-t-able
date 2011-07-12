@@ -79,6 +79,11 @@ We need some information to fit the site for your setup. This information is sto
 			<td>Seperator between link lists. Good ones are: &middot; = &ampmiddot or - or &#126; = &amp;#126;</td>
 		</tr>
 		<tr>
+			<td><label for="pw_bot_email">PW_BOT_EMAIL</label></td>
+			<td><input name="pw_bot_email" id="pw_bot_email" size="24" type="text" value=""></td>
+			<td>Email address used as sender for the 'forgot password' mails.</td>
+		</tr>
+		<tr>
 			<td></td>
 			<td align="right"><input class="button" value="GENERATE info.php" name="create-info-php" type="submit"></td>
 		</tr>
@@ -99,6 +104,7 @@ define('ABUSE_EMAIL', ''); // Email address for abuse ande complains
 define('MAIN_URL', ''); // Url of the root directory of the site
 define('POWERED_BY', 'Powered by &lt;a href=&quot;http://www.psoke.de/other-projects/time-t-able/&quot;?&gttime(t)able&lt;/a?&gt'); // Powered by message. This is the perfect place to fullfill the 'name the authorship' part of the cc license. Please leave it and the link there :)
 define('SEPERATOR', ''); // Seperator between link lists
+define('PW_BOT_EMAIL', ''); // Email used as sender for the 'forgot password' mails
 ?&gt
 </pre>
 and place it into:
