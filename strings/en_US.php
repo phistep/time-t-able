@@ -20,6 +20,7 @@ define('STR_LOGIN_LEGEND', 'Sign In:');
 define('STR_LOGIN_USERNAME', 'Username:');
 define('STR_LOGIN_PASSWORD', 'Password:');
 define('STR_LOGIN_GO_BUTTON', 'Sign In!');
+define('STR_LOGIN_FORGOT_PASSWORD', 'Forgot your password?');
 
 // REGISTER
 define('STR_REGISTER_LEGEND', 'Register');

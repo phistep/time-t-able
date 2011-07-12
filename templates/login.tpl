@@ -18,4 +18,6 @@
 		</table>
 	  </fieldset>
 	</form>
+	<br />
+	<a href="<?php echo MAIN_URL.'action/forgot-password.php'; ?>"><?php echo STR_LOGIN_FORGOT_PASSWORD; ?></a>
 </div>
