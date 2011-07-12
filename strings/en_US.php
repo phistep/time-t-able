@@ -5,6 +5,7 @@ include('info.php');
 // HEADER
 define('STR_TITLE_HOME', 'HOME');
 define('STR_TITLE_LOGIN', 'SIGN IN');
+define('STR_TITLE_FORGOT_PASSWORD', 'FORGOT PASSWORD');
 define('STR_TITLE_REGISTER', 'REGISTER');
 define('STR_LINK_LOGOUT', '<a href="'.MAIN_URL.'action/logout.php">Sign Out</a>');
 define('STR_LINK_LOGIN', '<a href="'.MAIN_URL.'action/login.php">Sign In</a>');
@@ -30,6 +31,13 @@ define('STR_REGISTER_CAPTCHA', 'Captcha:');
 define('STR_REGISTER_GO_BUTTON', 'Make me productive!');
 define('STR_REGISTER_DATA_LEGEND', 'Your Data:');
 define('STR_REGISTER_DATA_INFO', 'I take privacy very seriously. I will not use your email, but support ect. and I will never share it. I hate Spam, too. Your password will never be stored in clear text.');
+
+// FORGOT PASSWORD
+define('STR_FORGOT_DATA_LEGEND', 'Forgot your password?');
+define('STR_FORGOT_DATA_INFO', 'When you forgot your password, it can sinply be reset (if you registered with your real email address). The password will be set random and the new password will be send to your email address. You can use it to login and change the password to one you better remember.<br />If you didn\'t get the mail, check your spam folder or try sending it again.');
+define('STR_FORGOT_LEGEND', 'Send new password');
+define('STR_FORGOT_EMAIL', 'Email address:');
+define('STR_FORGOT_GO_BUTTON', 'Send!');
 
 // PUBLIC
 define('STR_PUBLIC_SHARING', ' is sharing his timetable online. If you also want to do that, you can register <a href="'.MAIN_URL.'action/register.php">here</a>!');

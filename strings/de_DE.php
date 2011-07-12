@@ -5,6 +5,7 @@ include('info.php');
 // HEADER
 define('STR_TITLE_HOME', 'STARTSEITE');
 define('STR_TITLE_LOGIN', 'EINLOGGEN');
+define('STR_TITLE_FORGOT_PASSWORD', 'PASSWORT VERGESSEN');
 define('STR_TITLE_REGISTER', 'REGISTRIEREN');
 define('STR_LINK_LOGOUT', '<a href="'.MAIN_URL.'action/logout.php">Ausloggen</a>');
 define('STR_LINK_LOGIN', '<a href="'.MAIN_URL.'action/login.php">Einloggen</a>');
