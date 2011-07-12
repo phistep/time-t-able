@@ -64,6 +64,7 @@ define('STR_ACCOUNT_SETTINGS', 'Kontoeinstellungen');
 define('STR_ACCOUNT_MAIL_BUTTON', 'Email &Auml;ndern');
 define('STR_ACCOUNT_MAIL_CONFIRM_PASSWORD', 'Passwort best&aumltigen:');
 define('STR_ACCOUNT_MAIL_NEW', 'Neue Emailadresse:');
+define('STR_ACCOUNT_MAIL_CURRENT', 'Aktuelle Emailadresse:');
 define('STR_ACCOUNT_USERNAME_BUTTON', 'Benutzername &Auml;ndern');
 define('STR_ACCOUNT_USERNAME_NEW', 'Neuer Benutzername:');
 define('STR_ACCOUNT_PASSWORD_BUTTON', 'Passwort &Auml;ndern');
@@ -93,6 +94,7 @@ define('STR_ALERT_REGISTER_SUCCESS', "Registrierung erfolgreich! Danke, dass du 
 define('STR_ALERT_SAVE_SUCCESSFULL', "Erfolgreich gespeichert!");
 define('STR_ALERT_CHANGED_PASSWORD', "Passwort erfolgreich ge&auml;ndert!");
 define('STR_ALERT_CHANGED_USERNAME', "Benutzername erfolgreich ge&auml;ndert!");
+define('STR_ALERT_CHANGED_EMAIL', "Emailadresse erfolgreich ge&auml;ndert!");
 
 // PREVIEW
 define('STR_ABOUT_HEADLINE', 'Was ist time(t)able?');

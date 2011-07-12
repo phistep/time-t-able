@@ -64,6 +64,7 @@ define('STR_ACCOUNT_SETTINGS', 'Account Settings');
 define('STR_ACCOUNT_MAIL_BUTTON', 'Change Email');
 define('STR_ACCOUNT_MAIL_CONFIRM_PASSWORD', 'Confirm Password:');
 define('STR_ACCOUNT_MAIL_NEW', 'New Email Address:');
+define('STR_ACCOUNT_MAIL_CURRENT', 'Current Email Address:');
 define('STR_ACCOUNT_USERNAME_BUTTON', 'Change Username');
 define('STR_ACCOUNT_USERNAME_NEW', 'New Username:');
 define('STR_ACCOUNT_PASSWORD_BUTTON', 'Change Password');
@@ -93,6 +94,7 @@ define('STR_ALERT_REGISTER_SUCCESS', "Registration successfull! Thanks for givin
 define('STR_ALERT_SAVE_SUCCESSFULL', "Saved successfully!");
 define('STR_ALERT_CHANGED_PASSWORD', "Password changed successfully!");
 define('STR_ALERT_CHANGED_USERNAME', "Username changed successfully!");
+define('STR_ALERT_CHANGED_EMAIL', "Email address changed successfully!");
 
 // PREVIEW
 define('STR_ABOUT_HEADLINE', 'What is time(t)able?');

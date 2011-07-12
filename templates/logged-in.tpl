@@ -369,16 +369,39 @@
 		<div id="accountpane" style="display:none;">
 			<hr />
 			<input type="button" id="changemail-button" value="<?php echo STR_ACCOUNT_MAIL_BUTTON; ?>" onClick="javascript:changeVisible('changemail-form'); changeValue('changemail-button', '<?php echo STR_ACCOUNT_MAIL_BUTTON; ?>', '<?php echo STR_CANCEL_BUTTON; ?>');"/>
+			
+			<?php
+			$query = "	SELECT
+							email
+						FROM
+							`time-t-able_users`
+						WHERE
+							ID = \"".$_SESSION['ID']."\"";
+			$generalcheck = $db->query($query);
+			if(!$generalcheck){
+				die('Query Error:'.$db->error);
+			}
+			if($generalcheck->num_rows){
+				$row = $generalcheck->fetch_assoc();
+					$email = $row['email'];
+			}
+
+			?>
+			
 			<form method="post" action="action/account.php" id="changemail-form" style="display:none;">
 				<input type="hidden" name="action" value="mail" />
 				<table>
 					<tr>
-						<td><label for="password"><?php echo STR_ACCOUNT_MAIL_CONFIRM_PASSWORD; ?></label></td>
-						<td><input type="password" id="password" value="" name="password" /></td>
+						<td><?php echo STR_ACCOUNT_MAIL_CURRENT; ?></td>
+						<td><code><?php echo $email; ?></code></td>
 					</tr>
 					<tr>
 						<td><label for="email"><?php echo STR_ACCOUNT_MAIL_NEW; ?></label></td>
 						<td><input type="text" id="email" value="" name="email" /></td>
+					</tr>
+					<tr>
+						<td><label for="password"><?php echo STR_ACCOUNT_MAIL_CONFIRM_PASSWORD; ?></label></td>
+						<td><input type="password" id="password" value="" name="password" /></td>
 					</tr>
 					<tr>
 						<td><input class="button" value="<?php echo STR_SAVE_BUTTON; ?>" name="formaction" type="submit" /></td>

@@ -12,7 +12,45 @@ else{
 		switch($_POST['action']){
 			
 			case 'mail':
-				echo "changing mail not supported yet";
+				if(!preg_match("/^.+@.+\..+$/", $_POST['email'])){
+					// handle fake email
+					alert(STR_ALERT_REGISTER_EMAIL, "error", MAIN_URL, 5);
+				}
+				// check for right password
+				$query = "	SELECT
+								pw_hash
+							FROM
+								`time-t-able_users`
+							WHERE
+								ID = ".$_SESSION['ID'];
+				$passwordcheck = $db->query($query);
+				if(!$passwordcheck){
+					die('Query Error:'.$db->error);
+				}
+				if($passwordcheck->num_rows){
+					$row = $passwordcheck->fetch_assoc();
+					if ($row['pw_hash'] == sha1($_POST['password'])){
+						// actual changeing
+						$query = "	UPDATE
+										`time-t-able_users`
+									SET
+										email = \"".$_POST['email']."\"
+									WHERE
+										ID = \"".$_SESSION['ID']."\"";
+						// perform query
+						$check = $db->query($query);
+
+						// check 
+						if (!$check){
+							die('Query Error: '.$db->error);
+						}
+
+						alert(STR_ALERT_CHANGED_EMAIL, "success", MAIN_URL, 5);
+					}
+					else{
+						alert(STR_ALERT_WRONGPW, "error", MAIN_URL, 3);
+					}
+				}
 			break;
 			
 			case 'username':
