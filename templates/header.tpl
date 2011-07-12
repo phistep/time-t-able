@@ -9,7 +9,7 @@
 	<meta name="author" content="<?php echo AUTHOR; ?>" />
 	<meta name="keywords" content="timetable" />
 	<meta name="date" content="<?php echo C_DATE; ?>" />
-	<meta name "time(t)able version" content="v1.0" />
+	<meta name="time(t)able version" content="v1.1" />
 	
 	<!-- CSS -->
 	<link rel="stylesheet" media="screen" type="text/css" href="<?php echo MAIN_URL; ?>css/style.css" title="Standart" />
