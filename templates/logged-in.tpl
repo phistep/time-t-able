@@ -133,8 +133,8 @@
 		
 		?>
 		
-		<a href="javascript:changeVisible('generalpane');"><h1><?php echo STR_GENERAL_PREFERENCES; ?></h1></a>
-		<div id="generalpane" style="display:none;">
+		<a href="javascript:changeVisible('generalpane');"><h2><?php echo STR_GENERAL_PREFERENCES; ?></h2></a>
+		<div id="generalpane" class="innerpane" style="display:none;">
 			<hr />
 			<form method="post" action="action/save.php">
 				<input type="hidden" name="section" value="general" />
@@ -182,9 +182,9 @@
 		
 		?>
 		
-		<a href="javascript:changeVisible('timespane');"><h1><?php echo STR_TIMES; ?></h1></a>
+		<a href="javascript:changeVisible('timespane');"><h2><?php echo STR_TIMES; ?></h2></a>
 		<hr />
-		<div id="timespane" style="display:none;">
+		<div id="timespane" class="innerpane" style="display:none;">
 			<form method="post" action="action/save.php">
 				<input type="hidden" name="section" value="times" />
 				<table>
@@ -219,9 +219,9 @@
 		</div>
 	</div>
 	<div class="optionpane">
-		<a href="javascript:changeVisible('subjectpane');"><h1><?php echo STR_SUBJECTS_SUBJECTS; ?></h1></a>
+		<a href="javascript:changeVisible('subjectpane');"><h2><?php echo STR_SUBJECTS_SUBJECTS; ?></h2></a>
 		<hr />
-		<div id="subjectpane" style="display:none;">
+		<div id="subjectpane" class="innerpane" style="display:none;">
 			<form method="post" action="action/save.php">
 				<input type="hidden" name="section" value="subjects" />
 				<input class="button" value="<?php echo STR_SAVE_BUTTON; ?>" name="formaction" type="submit" />
@@ -270,9 +270,9 @@
 		</div>
 	</div>
 	<div class="optionpane">
-		<a href="javascript:changeVisible('tablepane');"><h1><?php echo STR_TABLE_TIMETABLE; ?></h1></a>
+		<a href="javascript:changeVisible('tablepane');"><h2><?php echo STR_TABLE_TIMETABLE; ?></h2></a>
 		
-		<div id="tablepane" style="display:none;">
+		<div id="tablepane" class="innerpane" style="display:none;">
 			<hr />
 			<form method="post" action="action/save.php">
 				<input type="hidden" name="section" value="table" />
@@ -365,8 +365,8 @@
 		<hr />
 	</div>
 	<div class="optionpane">
-		<a href="javascript:changeVisible('accountpane');"><h1><?php echo STR_ACCOUNT_SETTINGS; ?></h1></a>
-		<div id="accountpane" style="display:none;">
+		<a href="javascript:changeVisible('accountpane');"><h2><?php echo STR_ACCOUNT_SETTINGS; ?></h2></a>
+		<div id="accountpane" class="innerpane" style="display:none;">
 			<hr />
 			<input type="button" id="changemail-button" value="<?php echo STR_ACCOUNT_MAIL_BUTTON; ?>" onClick="javascript:changeVisible('changemail-form'); changeValue('changemail-button', '<?php echo STR_ACCOUNT_MAIL_BUTTON; ?>', '<?php echo STR_CANCEL_BUTTON; ?>');"/>
 			
