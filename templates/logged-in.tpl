@@ -352,11 +352,11 @@
 							echo "
 							<td>
 								<div class=\"subject_".$selected_ID."\" id=\"lesson_".((5*$i+$j)+1)."\">
-									<select name=\"subject_".((5*$i+$j)+1)."\" onChange=\"changeClass('lesson_".((5*$i+$j)+1)."', this.options[this.selectedIndex].value)\">
+									<select name=\"subject_".((5*$i+$j)+1)."\" onChange=\"changeClass('lesson_".((5*$i+$j)+1)."', this.options[this.selectedIndex].value);changeText('table_room_".((5*$i+$j)+1)."', this.options[this.selectedIndex].value)\">
 										<option value=\"\">".STR_TABLE_CHOOSE."</option>\n".$subjectlist."
 									</select>
 									<br>
-									<input name=\"room_".((5*$i+$j)+1)."\" type=\"text\" size=\"5\" value=\"".$room."\">
+									<input id=\"table_room_".((5*$i+$j)+1)."\" name=\"room_".((5*$i+$j)+1)."\" type=\"text\" size=\"5\" value=\"".$room."\">
 								</div>
 							</td>";
 

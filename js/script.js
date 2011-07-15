@@ -29,3 +29,7 @@ function changeValue(id,valueStandard,valueChanged){
 function changeClass(id, index){
 	document.getElementById(id).className = 'subject_' + index;
 }
+
+function changeText(id, index){
+	document.getElementById(id).value = room[index];
+}

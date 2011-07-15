@@ -13,19 +13,19 @@
 	
 	<!-- CSS -->
 	<link rel="stylesheet" media="screen" type="text/css" href="<?php echo MAIN_URL; ?>css/style.css" title="Standart" />
-	
-	<script type="text/javascript" src="js/script.js"></script>
 	<?php
 	if($_SESSION['login'] == '1'){
 		// logged in
 		echo "<link rel=\"stylesheet\" media=\"screen\" type=\"text/css\" href=\"css/usercss.php?u=".$_SESSION['username']."\" />\n";
-		echo "\n\t<!-- JS -->\n\t<script type=\"text/javascript\" src=\"js/jscolor/jscolor.js\"></script>\n";
+		echo "\n\t<!-- JS -->\n\t<script type=\"text/javascript\" src=\"js/userjs.php?u=".$_SESSION['username']."\"></script>\n";
+		echo "\t<script type=\"text/javascript\" src=\"js/jscolor/jscolor.js\"></script>\n";
 	}
 	if(isset($_GET['view'])){
 		// logged in
 		echo "<link rel=\"stylesheet\" media=\"screen\" type=\"text/css\" href=\"css/usercss.php?u=".$_GET['view']."\" />\n";
 	}
 	?>
+	<script type="text/javascript" src="js/script.js"></script>
 	
 	<!-- Title -->
 	<title><?php echo "$title"; ?> <?php echo SEPERATOR; ?> <?php echo LOGO_NAME; ?></title>
