@@ -299,6 +299,7 @@
 							$name = '';
 							$room = '';
 							$subject_ID = '';
+							$selected_ID = '';
 
 							$query = "	SELECT
 											subject_ID,
@@ -335,10 +336,13 @@
 								while($row = $subjectcheck->fetch_assoc()){
 									if ($row['name'] != ''){
 										
-										if($row['ID'] == $subject_ID)
+										if($row['ID'] == $subject_ID){
 											$selected = ' selected="selected"';
-										else
+											$selected_ID = $subject_ID;
+										}
+										else{
 											$selected = '';
+										}
 											
 										$subjectlist = $subjectlist."\t\t\t\t\t\t\t\t\t".'<option value="'.$row['ID'].'"'.$selected.'>'.$row['name'].'</option>'."\n";
 									}
@@ -347,11 +351,13 @@
 							
 							echo "
 							<td>
-								<select name=\"subject_".((5*$i+$j)+1)."\">
-									<option value=\"\">".STR_TABLE_CHOOSE."</option>\n".$subjectlist."
-								</select>
-								<br>
-								<input name=\"room_".((5*$i+$j)+1)."\" type=\"text\" size=\"5\" value=\"".$room."\">
+								<div class=\"subject_".$selected_ID."\">
+									<select name=\"subject_".((5*$i+$j)+1)."\">
+										<option value=\"\">".STR_TABLE_CHOOSE."</option>\n".$subjectlist."
+									</select>
+									<br>
+									<input name=\"room_".((5*$i+$j)+1)."\" type=\"text\" size=\"5\" value=\"".$room."\">
+								</div>
 							</td>";
 
 						}
