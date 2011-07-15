@@ -39,8 +39,19 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['u'])){
 			$i = 0;
 			while($row = $tablecheck->fetch_assoc()){
 				$i++;
-				if($row['color'])
-					echo ".subject_".$i."\t{background-color:#".$row['color']."}\n";
+				if($row['color']){
+					echo ".subject_".$i."\t{\n\tbackground-color:#".$row['color'].";\n";
+				
+					$r = hexdec(substr($row['color'], 0, 2));
+					$g = hexdec(substr($row['color'], 2, 2));
+					$b = hexdec(substr($row['color'], 4, 2));
+					
+					if(($r + $g + $b) > 255)
+						echo "\tcolor:#000;\n}";
+					else
+						echo "\tcolor:#FFF;\n}";
+						
+				}					
 			}
 		}
 	}
