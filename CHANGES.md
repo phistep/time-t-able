@@ -17,13 +17,13 @@ v1.2
 Simple changes, should not conflict any modifications.
 
 ### CHANGED FILES
-M       css/style.css
-M       css/usercss.php
-M       js/script.js
-A       js/userjs.php
-M       strings/de_DE.php
-M       templates/header.tpl
-M       templates/logged-in.tpl
+	M       css/style.css
+	M       css/usercss.php
+	M       js/script.js
+	A       js/userjs.php
+	M       strings/de_DE.php
+	M       templates/header.tpl
+	M       templates/logged-in.tpl
 
 
 
