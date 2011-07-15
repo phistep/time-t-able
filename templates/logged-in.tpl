@@ -351,8 +351,8 @@
 							
 							echo "
 							<td>
-								<div class=\"subject_".$selected_ID."\">
-									<select name=\"subject_".((5*$i+$j)+1)."\">
+								<div class=\"subject_".$selected_ID."\" id=\"lesson_".((5*$i+$j)+1)."\">
+									<select name=\"subject_".((5*$i+$j)+1)."\" onChange=\"changeClass('lesson_".((5*$i+$j)+1)."', this.options[this.selectedIndex].value)\">
 										<option value=\"\">".STR_TABLE_CHOOSE."</option>\n".$subjectlist."
 									</select>
 									<br>

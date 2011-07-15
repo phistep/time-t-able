@@ -25,3 +25,7 @@ function changeValue(id,valueStandard,valueChanged){
 		document.getElementById(id).value = valueStandard;
 	}
 }
+
+function changeClass(id, index){
+	document.getElementById(id).className = 'subject_' + index;
+}
